@@ -24,5 +24,6 @@
   display: flex;               
   justify-content: flex-start; 
   align-items: center;         
-  flex-direction: column;      
+  flex-direction: column;   
+  background-color: var(--off-white); 
 }

@@ -40,7 +40,6 @@ const Nav_II = () => {
        }
     }
 
-    console.log(window.innerWidth)
 //const handle Links clic 
 const handleTabletLink = (e) => {
      setToggleOptions(false)

@@ -26,7 +26,6 @@ const Genius = () => {
       const geniusCont = document.querySelector(".genius_contaier")
       if(geniusCont){
        setUnlockHeight(geniusCont.offsetHeight + ((window.innerWidth < 750) ? 47 : 0));
-        console.log(geniusCont.offsetHeight)
       }
     }, [])
 

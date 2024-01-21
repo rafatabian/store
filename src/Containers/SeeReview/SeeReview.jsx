@@ -92,7 +92,6 @@ const handleSearch = (e) => {
 useEffect(() => {
    if(window.innerWidth < 730){
     setStarContStyles(true)
-    console.log("runs")
    }else{
     setStarContStyles(false)
    }

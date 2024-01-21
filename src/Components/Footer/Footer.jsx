@@ -1,5 +1,5 @@
 import "./Footer.css"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { LoginContext } from  "../../Contexts/ContextLog"
 // icons
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaHeart} from "react-icons/fa6"
@@ -21,7 +21,7 @@ const handleDropdown = (e) => {
 
 
   return (
-    <div className={`footer_main_container ${mobile ? "footer_container_mobile" : null}`} >
+    <div className={`footer_main_container ${mobile ? "footer_container_mobile" : null}`}>
        <div className={`footer_links_conteiner ${mobile ? "footer_links_mobile" : null}`}>
         <div className="footer_links_help">
           <div onClick={() => handleDropdown("help")}  className={mobile ? "footer_links_header_mobile" : null}>

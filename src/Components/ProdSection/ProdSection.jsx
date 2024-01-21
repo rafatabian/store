@@ -24,7 +24,6 @@ const handleLeftMove = (e) => {
     const ContWidth = prodContainer.scrollWidth
 
    if (e === "R"){
-    console.log(ContWidth)
     if(scroll < (ContWidth / 4)){
       setScroll(scroll + 300)
     }else{

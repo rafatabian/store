@@ -26,7 +26,6 @@ const App = () => {
   const [path, setPath] = useState(true)
   const [showFooter, setShowFooter] = useState(null)
   const [dataFromHome, setDataFromHome] = useState(null)
-  const [appBackgropund, setAppBackground] = useState(null)
   const [spacialMobile, setSpecialMobile] = useState(false)
 
   // conditionally render the navbar
@@ -39,12 +38,6 @@ const App = () => {
         setPath(false)
       }else{
         setPath(true)
-      }
-      // change background 
-      if(location.pathname === "/details-product"){
-       setAppBackground(true)
-      }else{
-        setAppBackground(false)
       }
 
   }, [location.pathname])
@@ -76,17 +69,17 @@ const App = () => {
       setSpecialMobile(true)
     }
   }, [])
-  // TO DO when refeshing the page to return to the home and not in a different root
+
+
   return (
 
-    <div className="app_container" style={{background: `${appBackgropund ? "linear-gradient(to right, white, var(--off-white))" : "var(--off-white)"}`}}>
+    <div className="app_container">
     <LoginFunction>
       <Suspense fallback={<div id="App_loading"><AiOutlineLoading /></div>}>
         {!currentPathName && <NavBar props={!path ? true : false} data={dataFromHome}/>}   
         {path && !spacialMobile && <Nav_II  />}
            <Routes>
             <Route path="/" element={<Home scrollFromHome={handleScrollFromHome}/>} />
-             {/* <Route path="/account" element={<Account />} />  */}
              <Route path="/liked" element={<Liked/>} />
             <Route path="/cart" element={<Cart/>} />
             <Route path="/login" element={<Login/>} />

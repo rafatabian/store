@@ -156,7 +156,7 @@ const closeFromChild = (e) => {
 }
 
   return (
-    <>
+    <div className="details_prod_background">
     {products.map((item) => item.id == prodID ? (
      <div key={item.id + item.price[0]} className="detailsProd_main_container">
       
@@ -287,7 +287,7 @@ const closeFromChild = (e) => {
     )
     : null
     )}
-    </> 
+    </div> 
   )
 }
 

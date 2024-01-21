@@ -42,7 +42,7 @@
     user-select: none;
 }
 .navbar_logo_container img{
-    width: 42%;
+    /* width: 42%; */
     height: 42%;
     object-fit: cover;
 }

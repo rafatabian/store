@@ -244,7 +244,20 @@
 /* 
 responsive design
  */
-@media screen and (max-width:750px){
+ @media screen and (min-width: 1530px){
+    .review_blur{
+        width: 100vw;
+        left: calc(((100vw - 1520px) / 2) * -1);
+    }
+ }
+ @media screen and (min-width: 1280px) and (max-width:1530px){
+    .review_blur{
+        width: 100vw;
+        left: calc(((100vw - 1280px) / 2) * -1);
+    }
+}
+
+ @media screen and (max-width:750px){
     .review_container{
     width: calc(100vw - 30px);
     }
