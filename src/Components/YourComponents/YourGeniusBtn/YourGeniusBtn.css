@@ -1,0 +1,55 @@
+.yourGenuis_btn_container{
+    width: 100%;
+    height: 56px !important;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.yourGenuis_btn_container:hover{
+    background-color: aliceblue;
+}
+.yourGenuis_btn_container a{
+    height: 56px !important;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0 15px;
+}
+.yourGeniusBtn_first_container,
+.yourGeniusBtn_second_container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.yourGeniusBtn_first_container{
+    align-items: center;
+    justify-content: flex-start;
+}
+.yourGeniusBtn_second_container{
+    align-items: center;
+    justify-content: flex-end;
+}
+.yourGeniusBtn_first_container img{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.yourGeniusBtn_first_container p{
+     font-size: 13px;
+     font-weight: 500;
+     color: black;
+}
+.yourGeniusBtn_second_container img{
+    width: 55px;
+    margin-right: 5px;
+}
+.yourGeniusBtn_second_container svg{
+    width: 18px;
+    height: 18px;
+    color: rgb(196, 196, 196);
+}

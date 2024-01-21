@@ -1,0 +1,94 @@
+.yourFisquare_container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 15px 35px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.yourFisquare_title_container{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.yourFisquare_title_container h1{
+    font-size: 20px;
+}
+.yourFisquare_activity_container{
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-direction: row;
+}
+.yourFisquare_first_activity,
+.yourFisquare_second_activity,
+.yourFisquare_third_activity{
+    margin: 0 15px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.yourFisquare_first_activity div:first-child,
+.yourFisquare_second_activity div:nth-child(1),
+.yourFisquare_third_activity div:nth-child(1){
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0 0;
+}
+.yourFisquare_first_activity div:first-child svg,
+.yourFisquare_second_activity div:nth-child(1) svg,
+.yourFisquare_third_activity div:nth-child(1) svg{
+  width: 38px;
+  height: 38px;
+}
+.yourFisquare_first_activity div:first-child svg{
+   color: #0082e6;
+}
+.yourFisquare_second_activity div:nth-child(1) svg{
+   color: #ef2809;
+}
+.yourFisquare_third_activity div:nth-child(1) svg{
+    color: #f29d38;
+}
+
+.yourFisquare_first_activity div:nth-child(2),
+.yourFisquare_second_activity div:nth-child(2),
+.yourFisquare_third_activity div:nth-child(2){
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.yourFisquare_first_activity div:nth-child(2) p,
+.yourFisquare_second_activity div:nth-child(2) p,
+.yourFisquare_third_activity div:nth-child(2) p{
+  width: 100%;
+  color:var(--off-black);
+  border-bottom: 1.5px solid rgb(219, 219, 219);
+  padding-bottom: 4px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+.yourFisquare_first_activity div:nth-child(2) a,
+.yourFisquare_second_activity div:nth-child(2) a,
+.yourFisquare_third_activity div:nth-child(2) a{
+    text-decoration: none;
+    color:#0082e6;
+    font-style: 500;
+    font-size: 14px;
+}
+.yourFisquare_first_activity div:nth-child(2) a:hover,
+.yourFisquare_second_activity div:nth-child(2) a:hover,
+.yourFisquare_third_activity div:nth-child(2) a:hover{
+    color: #005ea5;
+}

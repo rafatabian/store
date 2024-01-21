@@ -1,0 +1,42 @@
+.yourAccount_genius_square{
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    position: relative;
+}
+.yourAccount_genius_square h1{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(59, 59, 59);
+    margin-bottom: 10px;
+}
+.yourAccount_genius_square p{
+    font-size: 14px;
+    color: var(--off-black);
+}
+.yourAccount_genius_square a{
+    text-decoration: none;
+}
+.yourAccount_genius_square a p{
+   color: white;
+   font-size: 14px;
+   background-color: #8D66BF;
+   width: 90px;
+   text-align: center;
+   padding: 5px;
+   border-radius: 15px;
+   margin-top: 10px;
+}
+.yourAccount_genius_square a p:hover{
+    background-color: #7d4eba;
+}
+.yourAccount_genius_square img{
+    width: 80px;
+    height:80px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

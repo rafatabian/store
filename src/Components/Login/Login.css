@@ -1,0 +1,93 @@
+
+.login_popup_account{
+    position: absolute;
+    max-width: 300px;
+    top:56px;
+    animation: appear-nav-div 0.3s forwards;
+    box-shadow: 0 0 10px rgb(191, 191, 191);
+    border-radius: 6px;
+    z-index: 99;
+}
+@keyframes appear-nav-div {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login_text_icon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 6px 6px 0 0;
+    padding: 0px 10px;
+}
+.login_text_icon svg{
+    width: 60px;
+    height: 60px;
+    color: var(--blue);
+    margin:0 10px;
+}
+.login_text_icon p {
+    font-size: 13px;
+    color: var(--off-black);
+}
+.login_buttons{
+    width: 100%;
+    background-color:rgb(237, 237, 237);
+    border-radius: 0 0 6px 6px;
+    padding: 15px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.login_buttons a svg{
+    width: 18px;
+    height: 18px;
+    color: white;
+    z-index: 99;
+}
+.login_buttons a:nth-child(1){
+    background:linear-gradient(to right, rgb(53, 117, 255), rgb(53, 164, 255));
+    width: 150px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+.login_buttons a:nth-child(1):hover{
+    background:linear-gradient(to right, rgb(37, 106, 255), rgb(33, 155, 255));
+}
+.login_buttons a:nth-child(1) p{
+      color: white; 
+      font-size: 13px;
+      z-index: 98;
+}
+.login_buttons a:nth-child(1) p::before{
+    content: "";
+    width: 25%;
+    height: 150%;
+    position: absolute;
+    left:-6px;
+    top:-6px;
+    background:linear-gradient(to right,  rgb(212, 0, 0), rgb(255, 49, 49));
+    z-index: -1;
+    transform: rotate(10deg);
+}
+.login_buttons a:nth-child(2){
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    color: var(--blue);
+}

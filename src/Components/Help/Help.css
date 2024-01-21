@@ -1,0 +1,105 @@
+.help_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#create_account,
+#returns_anstallments,
+#payment_delivery_cookies,
+#contact{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#create_account > div:first-child,
+#returns_anstallments > div:first-child,
+#payment_delivery_cookies > div:first-child,
+#contact > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 42px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    box-shadow: 0 5px 10px #eee;
+}
+#create_account h1,
+#returns_anstallments h1,
+#payment_delivery_cookies h1,
+#contact h1{
+    width: 600px;
+    margin-left: -15px !important;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    margin: 15px 0;
+    font-weight: 500;
+    color:#333333;
+}
+
+#create_account ul,
+#returns_anstallments ul,
+#payment_delivery_cookies ul,
+#create_account ul{
+    max-width: 600px;
+    margin-left: 20px;
+}
+#contact p{
+    width: 600px;
+    text-align: start;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+}
+#contact p:nth-child(2) span{
+   font-weight: 500;
+}
+
+#create_account ul li,
+#returns_anstallments ul li,
+#payment_delivery_cookies ul li,
+#create_account ul li{
+    font-family: var(--roboto);
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: black;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+/* 
+responsive design 
+ */
+ @media screen and (max-width: 800px){
+    #create_account > div:first-child,
+    #returns_anstallments > div:first-child,
+    #payment_delivery_cookies > div:first-child,
+    #contact > div:first-child{
+        width: calc(100vw - 30px);
+        padding: 20px;
+    }
+    #create_account h1,
+    #returns_anstallments h1,
+    #payment_delivery_cookies h1,
+    #contact h1{
+        width: 100%;
+        margin-left: unset !important;
+    }
+    #contact p{
+      width: 100%;
+    }
+    #contact div p:nth-child(2){
+        margin-top: 0;
+    }
+    #contact p:nth-child(2){
+        margin: 10px 0;
+    }
+ }
+

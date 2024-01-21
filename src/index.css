@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --roboto: 'Roboto', sans-serif;
+    --blue: rgb(34, 148, 255);
+    --off-black: rgba(0, 0, 0, 0.7);
+    --off-white: rgb(245, 245, 245);
+}
+
+a, p, h1, h2, h3, h4, h5, h6{
+    font-family: var(--roboto);
+    font-weight: unset;
+}
+/* removing default arrows from inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+img{
+  user-select: none;
+}

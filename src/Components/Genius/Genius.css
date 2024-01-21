@@ -1,0 +1,252 @@
+.genius_contaier{
+    width: 100%;
+    min-height: calc(100vh - 56px);
+    background: linear-gradient(7deg, #5B2C6F 20%, #A639D3 49%, #B649E3 55%, #A639D3 62%, #8E44AD 74%, #7A3297 87%);
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.genius_logo_conteiner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.genius_logo_conteiner::after{
+    content: '';
+    width: 180px;
+    /* height: 100%; */
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 16px;
+}
+.genius_logo_conteiner img{
+     width: 230px;
+     z-index: 50;
+}
+.genius_info_container{
+    width: 45%;
+    max-width: 450px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+.genius_first_info,
+.genius_second_info,
+.genius_third_info{
+    width: 110px;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 0 5px #9412cb;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.genius_first_info span:nth-child(1),
+.genius_second_info span:nth-child(1),
+.genius_third_info span:nth-child(1){
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:5px;
+    background: radial-gradient(circle at 50% 50%, #E4006A 36%, #2e55c1 90%);
+}
+.genius_first_info span svg{
+    width: 30px;
+    height: 30px;
+    color:white;
+}
+.genius_second_info span svg{
+     width: 27px;
+     height: 27px;
+     color:white;
+}
+.genius_third_info span svg{
+    width: 29px;
+    height: 29px;
+    color:white;
+}
+.genius_first_info span:nth-child(2),
+.genius_second_info span:nth-child(2),
+.genius_third_info span:nth-child(2){
+     width: 100%;
+     display: flex;
+     align-items:center ;
+     justify-content: center;
+}
+.genius_first_info span:nth-child(2) p,
+.genius_second_info span:nth-child(2) p,
+.genius_third_info span:nth-child(2) p{
+    text-align: center;
+    font-size: 15px;
+    color: var(--off-black);
+    font-weight: 500;
+}
+.genius_main_text_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.genius_main_text_container p:first-child{
+    font-size: 30px;
+    color:white;
+}
+.genius_main_text_container p:nth-child(2),
+.genius_main_text_container p:nth-child(3){
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+}
+.genius_btn_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.genius_btn_container button{
+     height: 40px;
+     padding: 5px 20px;
+     border: none;
+     background-color: #E4006A;
+     color: white;
+     border-radius:20px;
+     font-size: 16px;
+     font-weight: 400;
+     cursor: pointer;
+    }
+    .genius_btn_container button:hover{
+        background-color: #d20062;
+    }
+/* pop up container */
+.genius_unlock_container{
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 56;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 90;
+    animation: unlock_anim 0.3s;
+}
+.genius_unlock_container svg{
+    color: white;
+    width: 50px;
+    height: 50px;
+    z-index: 98;
+}
+@keyframes unlock_anim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+/* 
+ responsive design
+*/
+  @media screen and (max-width: 840px){
+    .genius_info_container{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .genius_first_info,
+    .genius_second_info,
+    .genius_third_info{
+        margin: 0 10px
+    }
+     .genius_logo_conteiner{
+        margin-top: 15vh;
+        width: 170px;
+     }
+     .genius_logo_conteiner img{
+        width: 100%;
+     }
+     .genius_logo_conteiner::after{
+        width: 150px;
+     }
+    .genius_first_info,
+    .genius_second_info,
+    .genius_third_info{
+       width: 95px;
+       height: 115px;
+    }
+    .genius_first_info span:nth-child(1),
+    .genius_second_info span:nth-child(1),
+    .genius_third_info span:nth-child(1){
+        width: 50px;
+        height: 50px;
+    }
+    .genius_first_info span:nth-child(1) svg,
+    .genius_second_info span:nth-child(1) svg,
+    .genius_third_info span:nth-child(1) svg{
+      width: 27px;
+      height: 27px;
+    }
+    .genius_main_text_container p:first-child{
+        font-size: 27px;
+        margin-top: 20px;
+    }
+    .genius_main_text_container p:nth-child(2),
+    .genius_main_text_container p:nth-child(3){
+       font-size: 35px;
+    }
+    .genius_btn_container button{
+        width: calc(90vw - 30px);
+        max-width: 350px;
+    }
+    .genius_unlock_container{
+       top:95px;
+       align-items: flex-start;
+       top:45px;
+    }
+    .genius_unlock_container::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top:-5px;
+        left:0;
+        right:0;
+        background: linear-gradient(to bottom, transparent 0, #00000035 5px, transparent 5px);
+    }
+    .genius_unlock_container svg{
+        margin-top: calc(7vh + 40px);
+    }
+}
+
+@media screen and (max-width: 326px){
+    .genius_first_info,
+    .genius_second_info,
+    .genius_third_info{
+        margin: 0 3px
+    }
+    .genius_main_text_container p:first-child{
+        font-size: 25px;
+    }
+    .genius_main_text_container p:nth-child(2),
+    .genius_main_text_container p:nth-child(3){
+        font-size: 29px;
+    }
+}
