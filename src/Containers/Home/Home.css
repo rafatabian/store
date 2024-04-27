@@ -315,15 +315,9 @@ responsive design classes
     margin-bottom: 20px;
 }
 
-/* TO DO
-- add @media for 1500px and increase the size of the image scorll
- and make the scroll work by setitng a scroll mesure fixed
--when becomes smaller add the old version "vw - 304"
--add @media to all of the project 
--POST IT today!!!
-
--create CV
--APPlY !!! be hungry for money*/
+#electronics, #fashion, #discover, #camping, #essentals, #tools, #home{
+    /* add dimensions */
+}
 @media screen and (min-width: 1530px){
     .home_img_conteiner{
         width: 1260px ;
@@ -415,7 +409,7 @@ responsive design classes
     
     .home_section{
         width: 1196px;
-        margin: 42px 0 !important   /*!important*/;
+        margin: 42px 0 !important;
     }
     .home_bottom_section_conteiner{
         width: 1190px;
