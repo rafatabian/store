@@ -7,7 +7,10 @@ import CartFooter from "../../Components/CartFooter/CartFooter"
 import { IoIosArrowForward } from "react-icons/io"
 import { BsFastForwardFill } from "react-icons/bs"
 
-const CartProducts = lazy(() => import("../../Components/CartProd/CartProd"))
+// const CartProducts = lazy(() => import("../../Components/CartProd/CartProd"))
+// normal import 
+import CartProducts from "../../Components/CartProd/CartProd"
+
 import { products } from "../../assets/products"
 
 

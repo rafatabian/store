@@ -21,7 +21,10 @@ import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
 
-const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
+// const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
+
+// normal import
+import ProductSection from "../../Components/ProdSection/ProdSection"
 
 
 const Home = ({scrollFromHome}) => {

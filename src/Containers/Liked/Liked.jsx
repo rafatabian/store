@@ -9,7 +9,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { FaStar, FaHeart} from "react-icons/fa"
 import { products } from "../../assets/products"
 import { lazy } from "react"
-const Product = lazy(() => import("../../Components/Product/Product"))
+
+// const Product = lazy(() => import("../../Components/Product/Product"))
+// normla import
+import Product from "../../Components/Product/Product"
+
 
 const Liked = () => {
    const { liked, redirectPage, mobile } = useContext(LoginContext)

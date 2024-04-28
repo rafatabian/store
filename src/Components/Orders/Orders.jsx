@@ -5,10 +5,15 @@ import { IoInformationCircleOutline } from "react-icons/io5"
 import  frigde  from "../../assets/fridge.webp"
 
 
-const Footer = lazy(() => import("../Footer/Footer"))
-const First = lazy(() => import("../YourComponents/YourFsquare/YourFsquare"))
-const Second = lazy(() => import("../YourComponents/YourSsquare/YourSsquare"))
-const GeniusBtn = lazy(() => import("../YourComponents/YourGeniusBtn/YourGeniusBtn"))
+// const Footer = lazy(() => import("../Footer/Footer"))
+// const First = lazy(() => import("../YourComponents/YourFsquare/YourFsquare"))
+// const Second = lazy(() => import("../YourComponents/YourSsquare/YourSsquare"))
+// const GeniusBtn = lazy(() => import("../YourComponents/YourGeniusBtn/YourGeniusBtn"))
+// normal import 
+import Footer from "../Footer/Footer"
+import First from "../YourComponents/YourFsquare/YourFsquare"
+import Second from "../YourComponents/YourSsquare/YourSsquare"
+import GeniusBtn from "../YourComponents/YourGeniusBtn/YourGeniusBtn"
 
 const Orders = () => {
     const [orders, setOrders] = useState(false)

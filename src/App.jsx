@@ -5,22 +5,40 @@ import { LoginFunction } from "./Contexts/ContextLog"
 import { AiOutlineLoading } from "react-icons/ai"
 
 
-const NavBar = lazy(() => import("./Containers/NavBar/NavBar"))
-const Home = lazy(() => import("./Containers/Home/Home"))
-const Nav_II = lazy(() => import("./Components/Nav_II/Nav_II"))
-const Footer = lazy(() => import("./Components/Footer/Footer"))
-const Liked = lazy(() => import("./Containers/Liked/Liked"))
-const Cart = lazy(() => import("./Containers/Cart/Cart"))
-const Login = lazy(() => import("./Components/CreateAcc/CreateAcc") )
-const ExistingAcc = lazy(() =>import("./Components/ExistingAcc/ExistingAcc"))
-const Help = lazy(() => import("./Components/Help/Help"))
-const YourAccount = lazy(() => import("./Containers/YourAccount/YourAccount"))
-const Genius = lazy(() => import("./Components/Genius/Genius"))
-const DetailsProduct = lazy(() => import("./Containers/DetailsProd/DetailsProd"))
-const ProdCategories = lazy(() => import("./Containers/prodCategories/prodCategories"))
-const Search = lazy(() => import("./Containers/Search/Search"))
-const Orders = lazy(() => import("./Components/Orders/Orders"))
-const SeeReview = lazy(() => import("./Containers/SeeReview/SeeReview"))
+// const NavBar = lazy(() => import("./Containers/NavBar/NavBar"))
+// const Home = lazy(() => import("./Containers/Home/Home"))
+// const Nav_II = lazy(() => import("./Components/Nav_II/Nav_II"))
+// const Footer = lazy(() => import("./Components/Footer/Footer"))
+// const Liked = lazy(() => import("./Containers/Liked/Liked"))
+// const Cart = lazy(() => import("./Containers/Cart/Cart"))
+// const Login = lazy(() => import("./Components/CreateAcc/CreateAcc") )
+// const ExistingAcc = lazy(() =>import("./Components/ExistingAcc/ExistingAcc"))
+// const Help = lazy(() => import("./Components/Help/Help"))
+// const YourAccount = lazy(() => import("./Containers/YourAccount/YourAccount"))
+// const Genius = lazy(() => import("./Components/Genius/Genius"))
+// const DetailsProduct = lazy(() => import("./Containers/DetailsProd/DetailsProd"))
+// const ProdCategories = lazy(() => import("./Containers/prodCategories/prodCategories"))
+// const Search = lazy(() => import("./Containers/Search/Search"))
+// const Orders = lazy(() => import("./Components/Orders/Orders"))
+// const SeeReview = lazy(() => import("./Containers/SeeReview/SeeReview"))
+
+// normal import 
+import NavBar from "./Containers/NavBar/NavBar"
+import Nav_II from "./Components/Nav_II/Nav_II"
+import Home from "./Containers/Home/Home" // here is one lazy import
+import Footer from "./Components/Footer/Footer"
+import Liked from "./Containers/Liked/Liked"  //here
+import Cart from "./Containers/Cart/Cart"  //here
+import Login from "./Components/CreateAcc/CreateAcc"
+import ExistingAcc from "./Components/ExistingAcc/ExistingAcc"
+import Help from "./Components/Help/Help"
+import YourAccount from "./Containers/YourAccount/YourAccount" //here
+import Genius from "./Components/Genius/Genius"
+import DetailsProduct from "./Containers/DetailsProd/DetailsProd" //here
+import ProdCategories from "./Containers/prodCategories/prodCategories"
+import Search from "./Containers/Search/Search" //here
+import Orders from "./Components/Orders/Orders" //here
+import SeeReview from "./Containers/SeeReview/SeeReview" //here
 
 const App = () => {
   const [path, setPath] = useState(true)

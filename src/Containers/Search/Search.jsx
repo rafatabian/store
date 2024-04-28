@@ -6,9 +6,11 @@ import { IoInformationCircleOutline } from "react-icons/io5"
 import { RiMenu2Fill, RiMenuFill, RiMenu3Fill} from "react-icons/ri"
 
 
-const Product = lazy(() => import("../../Components/Product/Product"))
-const Footer = lazy(() => import("../../Components/Footer/Footer"))
-
+// const Product = lazy(() => import("../../Components/Product/Product"))
+// const Footer = lazy(() => import("../../Components/Footer/Footer"))
+// normal import 
+import Product from "../../Components/Product/Product"
+import Footer from "../../Components/Footer/Footer"
 
 const Search = () => {
     const [prodIDs, setProdIDs] = useState([])

@@ -10,7 +10,10 @@ import { RiDeleteBin6Line } from "react-icons/ri"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import geniusBTN from "../../assets/logo_genius_btn.png"
 
-const Review = lazy(() => import("../../Components/Review/Review"))
+// const Review = lazy(() => import("../../Components/Review/Review"))
+// normal imprt 
+import Review from "../../Components/Review/Review"
+
 
 // component pentru vizalizare detalii produs
 const DetailsProd = () => {
