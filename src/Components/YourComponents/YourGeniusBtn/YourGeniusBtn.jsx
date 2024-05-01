@@ -1,7 +1,7 @@
 import "./YourGeniusBtn.css"
 import { Link } from 'react-router-dom'
-import genius_btn from "../../../assets/logo_genius_btn.png"
-import genius_long_logo from "../../../assets/logo_genius.png"
+import genius_btn from "../../../assets/logo_genius_btn.webp"
+import genius_long_logo from "../../../assets/logo_genius.webp"
 import { MdOutlineArrowForwardIos } from "react-icons/md"
 
 const YourGeniusBtn = () => {

@@ -1,5 +1,5 @@
 import "./YourFosquare.css"
-import genius_logo from "../../../assets/logo_genius.png"
+import genius_logo from "../../../assets/logo_genius.webp"
 import { FaTruckFast, FaUnlock } from "react-icons/fa6"
 import { MdLocalOffer } from "react-icons/md"
 import { Link } from "react-router-dom"

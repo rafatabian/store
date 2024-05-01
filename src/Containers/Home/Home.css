@@ -3,6 +3,9 @@
     background-color: var(--off-white);
     padding-bottom:2.5rem;
 }
+.home_sections > section{
+  width: 100%;
+}
 .home_img_main_container{
     width: 100%;
     height: 425.33px; 
@@ -28,6 +31,7 @@
 }
 .home_img_conteiner img{
     width: calc(100vw - 304px);
+    height: auto;
     object-fit: contain;
 }
 .home_img_button_left,
@@ -143,6 +147,7 @@ home bottom section
 }
 .home_bottom_newsletter div:first-child img{
     width: 390px;
+    height: auto;
     object-fit: cover;
     background-repeat: no-repeat;
 }
@@ -264,6 +269,7 @@ home bottom section
 }
 .home_bottom_marketplace img{
     height: 100%;
+    width: auto;
     margin-right: 20px;
     object-fit: cover;
 }

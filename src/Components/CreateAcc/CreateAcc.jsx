@@ -1,6 +1,6 @@
 import "./CreateAcc.css"
 import { Link, useNavigate } from "react-router-dom"
-import dollarImg from "../../assets/dollar-inage.png"
+import dollarImg from "../../assets/dollar-inage.webp"
 import { useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../Contexts/ContextLog"
 import { BiErrorCircle } from "react-icons/bi"

@@ -1,5 +1,5 @@
 import "./NavBar.css"
-import dollarImg from "../../assets/dollar-inage.png"
+import dollarImg from "../../assets/dollar-inage.webp"
 import { useContext, useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"

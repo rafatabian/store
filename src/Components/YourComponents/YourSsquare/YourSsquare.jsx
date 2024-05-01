@@ -1,5 +1,5 @@
 import "./YourSsquare.css"
-import genius from "../../../assets/genius_phone.png"
+import genius from "../../../assets/genius_phone.webp"
 import { Link } from "react-router-dom"
 
 const YourSsquare = () => {

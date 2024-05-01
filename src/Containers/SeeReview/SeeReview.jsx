@@ -6,7 +6,7 @@ import { products } from "../../assets/products"
 import { FaStar } from "react-icons/fa"
 import { AiFillLike } from "react-icons/ai"
 import { Link } from "react-router-dom"
-import  starReview  from "../../assets/star_review.png"
+import  starReview  from "../../assets/star_review.webp"
 import { LoginContext } from "../../Contexts/ContextLog"
 
 

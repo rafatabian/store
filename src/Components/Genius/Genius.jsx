@@ -1,5 +1,5 @@
 import "./Genius.css"
-import logo_genius from "../../assets/logo_genius.png"
+import logo_genius from "../../assets/logo_genius.webp"
 import { FaTruckFast, FaUnlock } from "react-icons/fa6"
 import { MdLocalOffer } from "react-icons/md"
 import { FaUnlockAlt } from "react-icons/fa"

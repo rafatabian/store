@@ -5,16 +5,16 @@ import { lazy } from "react"
 // icons
 import { MdOutlineArrowForwardIos } from "react-icons/md"
 // images 
-import home_christmas  from "../../assets/home_img/home_drinks.png"
-import home_christmas_s from "../../assets/home_img/home_drinks_s.png"
-import home_tree from "../../assets/home_img/home_cook.png"
-import home_tree_s from "../../assets/home_img/home_cook_s.png"
-import home_shoe from "../../assets/home_img/home_shoe.png"
-import home_shoe_s from "../../assets/home_img/home_shoe_s.png"
-import store_corporate from "../../assets/home_img/store_corporate.png"
-import store_corporate_s from "../../assets/home_img/store_corporate_s.png"
+import home_christmas  from "../../assets/home_img/home_drinks.webp"
+import home_christmas_s from "../../assets/home_img/home_drinks_s.webp"
+import home_tree from "../../assets/home_img/home_cook.webp"
+import home_tree_s from "../../assets/home_img/home_cook_s.webp"
+import home_shoe from "../../assets/home_img/home_shoe.webp"
+import home_shoe_s from "../../assets/home_img/home_shoe_s.webp"
+import store_corporate from "../../assets/home_img/store_corporate.webp"
+import store_corporate_s from "../../assets/home_img/store_corporate_s.webp"
 import store_newsletter from "../../assets/home_img/store_newsletter.webp"
-import store_marketplace from "../../assets/home_img/store_marketplace.png"
+import store_marketplace from "../../assets/home_img/store_marketplace.webp"
 
 import { useState, useContext } from "react"
 import { useEffect } from "react"
@@ -221,8 +221,8 @@ useEffect(() => {
          <Link to="https://www.emag.ro/" style={{right: mobile ? 10 : null}}>source: emag.ro</Link>
       </div>
 
-
-      <section id="electronics">
+    <div className="home_sections">
+      <section id="electronics" style={{width: "100%"}}>
         <ProductSection props="electronics"/>
       </section>
       <section id="fashion">
@@ -243,7 +243,7 @@ useEffect(() => {
       <section id="home">
         <ProductSection props="home"/>
       </section>
-     
+    </div>
       
 
      <div className="home_bottom_section_conteiner">

@@ -8,7 +8,7 @@ import { FaStar, FaStarHalf, FaHeart, FaRegStar, FaShoppingCart, FaRegHeart } fr
 import { FaTruck, FaCheck } from "react-icons/fa6"
 import { RiDeleteBin6Line } from "react-icons/ri"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import geniusBTN from "../../assets/logo_genius_btn.png"
+import geniusBTN from "../../assets/logo_genius_btn.webp"
 
 // const Review = lazy(() => import("../../Components/Review/Review"))
 // normal imprt 
