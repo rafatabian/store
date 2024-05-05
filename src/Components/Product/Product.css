@@ -30,7 +30,7 @@
     z-index: 10;
 }
 .products_image_container{
-    width: 100%;
+    width: auto;
     height: 200px;
     margin: 10px 0;
     display: flex;
@@ -158,6 +158,8 @@
 }
 
 .products_review p{
+    width: auto;
+    height: auto;
     margin-left:  5px;
     color: #222222;
     font-size: 14px; 
