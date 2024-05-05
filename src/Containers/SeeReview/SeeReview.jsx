@@ -10,17 +10,11 @@ import  starReview  from "../../assets/star_review.webp"
 import { LoginContext } from "../../Contexts/ContextLog"
 
 
-// const FirstAccountComponent = lazy(() => import("../../Components/YourComponents/YourFsquare/YourFsquare"))
-// const SecondAccountComponent = lazy(() => import("../../Components/YourComponents/YourSsquare/YourSsquare"))
-// const ThirdAcconutComponent = lazy(() => import("../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"))
-// const Footer = lazy(() => import("../../Components/Footer/Footer"))
-// const Review = lazy(() => import("../../Components/Review/Review"))
-// normal imopots
-import FirstAccountComponent from "../../Components/YourComponents/YourFsquare/YourFsquare"
-import SecondAccountComponent from "../../Components/YourComponents/YourSsquare/YourSsquare"
-import ThirdAcconutComponent from "../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"
-import Footer from "../../Components/Footer/Footer"
-import Review from "../../Components/Review/Review" 
+const FirstAccountComponent = lazy(() => import("../../Components/YourComponents/YourFsquare/YourFsquare"))
+const SecondAccountComponent = lazy(() => import("../../Components/YourComponents/YourSsquare/YourSsquare"))
+const ThirdAcconutComponent = lazy(() => import("../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"))
+const Footer = lazy(() => import("../../Components/Footer/Footer"))
+const Review = lazy(() => import("../../Components/Review/Review"))
 
 const SeeReview = () => {
     const { reviewNr } = useContext(LoginContext)

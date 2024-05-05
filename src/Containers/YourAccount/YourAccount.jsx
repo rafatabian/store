@@ -6,19 +6,13 @@ import { BiErrorCircle } from "react-icons/bi"
 import { Link, useNavigate } from "react-router-dom"
 
 
-// const Fsquare = lazy(() => import("../../Components/YourComponents/YourFsquare/YourFsquare"))
-// const Ssquare = lazy(() => import("../../Components/YourComponents/YourSsquare/YourSsquare"))
-// const Tsquare = lazy(() =>  import("../../Components/YourComponents/YourTsquare/YourTsquare"))
-// const Fosquare = lazy(() => import("../../Components/YourComponents/YourFosquare/YourFosquare"))
-// const Fisquare = lazy(() => import("../../Components/YourComponents/YourFisquare/YourFisquare"))
-// const GeniusBtn = lazy(() => import("../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"))
-// normal imports 
-import Fsquare from "../../Components/YourComponents/YourFsquare/YourFsquare"
-import Ssquare from "../../Components/YourComponents/YourSsquare/YourSsquare"
-import Tsquare from "../../Components/YourComponents/YourTsquare/YourTsquare"
-import Fosquare from "../../Components/YourComponents/YourFosquare/YourFosquare"
-import Fisquare from "../../Components/YourComponents/YourFisquare/YourFisquare"
-import GeniusBtn from"../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"
+const Fsquare = lazy(() => import("../../Components/YourComponents/YourFsquare/YourFsquare"))
+const Ssquare = lazy(() => import("../../Components/YourComponents/YourSsquare/YourSsquare"))
+const Tsquare = lazy(() =>  import("../../Components/YourComponents/YourTsquare/YourTsquare"))
+const Fosquare = lazy(() => import("../../Components/YourComponents/YourFosquare/YourFosquare"))
+const Fisquare = lazy(() => import("../../Components/YourComponents/YourFisquare/YourFisquare"))
+const GeniusBtn = lazy(() => import("../../Components/YourComponents/YourGeniusBtn/YourGeniusBtn"))
+
 
 const YourAccount = () => {
   const {redirectPage, year, setYear, month, setMonth, day, setDay, setName, setAlias, setEmail, setPhoneNr, showSettings, setShowSettings} = useContext(LoginContext)

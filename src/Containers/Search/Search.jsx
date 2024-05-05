@@ -6,11 +6,9 @@ import { IoInformationCircleOutline } from "react-icons/io5"
 import { RiMenu2Fill, RiMenuFill, RiMenu3Fill} from "react-icons/ri"
 
 
-// const Product = lazy(() => import("../../Components/Product/Product"))
-// const Footer = lazy(() => import("../../Components/Footer/Footer"))
-// normal import 
-import Product from "../../Components/Product/Product"
-import Footer from "../../Components/Footer/Footer"
+const Product = lazy(() => import("../../Components/Product/Product"))
+const Footer = lazy(() => import("../../Components/Footer/Footer"))
+
 
 const Search = () => {
     const [prodIDs, setProdIDs] = useState([])
@@ -69,13 +67,13 @@ useEffect(() => {
   
   if(pageWidth > 1260){
       setMenuPosition(["repeat(4, 1fr)", "flex-start"])
-      setMenuWidth("947px")
+      setMenuWidth("922px")
   }else if(pageWidth < 980){
       setMenuPosition(["repeat(2, 1fr)", "center"])
-      setMenuWidth("464px")
+      setMenuWidth("456px")
   }else if(pageWidth < 1260){
       setMenuPosition(["repeat(3, 1fr)", "flex-start"])
-      setMenuWidth("706px")
+      setMenuWidth("689px")
   }
   }, [])
 

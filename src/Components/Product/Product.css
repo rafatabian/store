@@ -1,17 +1,14 @@
 .products_main_container{
     width: 220px;
     min-width: 223.2px; /* was !important if errors*/ 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
     border-radius: 6px;
-    margin: 9px;
+    margin: 5px;
     padding-bottom: 10px;
     box-shadow: 0 0 10px rgb(241, 241, 241);
     background-color: white;
     position: relative;
     min-height: 387.667px; 
+    display: inline-block;
 }
 .products_main_container:hover{
     box-shadow: 0 0 10px rgb(227, 227, 227);
@@ -133,12 +130,13 @@
     padding: 0 8px;
 }
 .products_price_title_review h2{
+    width: 100%;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.3px;
     line-height: 20px;
     max-height: 40px;
-    overflow: hidden;
+    white-space: normal;
 }
 .products_review{
     margin: 10px 0;
@@ -158,10 +156,11 @@
     width: 16px;
     height: 16px;
 }
+
 .products_review p{
-   /* rgin-left:  5px;
+    margin-left:  5px;
     color: #222222;
-    font-size: 14px; ma */
+    font-size: 14px; 
     color: blue
 }
 .products_review p{
@@ -219,7 +218,7 @@
     color: white;
 }
 .products_review{
-    width: 100vw;
+    width: 100%;
     margin-left: -15px;
     padding: 15px 15px 0 15px;
     justify-content: flex-start !important;
@@ -231,4 +230,4 @@
         width: 241px !important;
         height: 418px !important;
     }
-}
+} 

@@ -17,9 +17,10 @@ const Nav_II = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [toggleOptions, setToggleOptions] = useState(false)
 
- 
-    // check if the current page is home
     const location = useLocation()
+
+
+    // check if the current page is home
     const locationName = location.pathname === "/"
     // 
     useEffect(() => {
@@ -69,6 +70,7 @@ const handleMenuTablet = () => {
 }
 
     return (
+        
     <div className="nav_II_container">
         <div className="navII_width">
         <div className="nav_II_buttons_container">
@@ -76,7 +78,6 @@ const handleMenuTablet = () => {
             <IoIosMenu />
             <p>Products</p>
             {/* products menu */}
-            {/* TO DO add icons */}
             {showMenu && 
                 <div className="nav_II_menu">
                     <Link to="/products-categories?data=cameras-tech"><IoCameraOutline /> Cameras & Tech</Link>
@@ -98,17 +99,17 @@ const handleMenuTablet = () => {
            {lessTenH && <button onClick={() => setToggleOptions(!toggleOptions)} style={{position: toggleOptions ? "relative" : null}} className="navII_tablet_show_more_btn">Show More<IoMdArrowDropdown /></button>}
     
            
-             {lessTenH && toggleOptions ?
-             <div className="navII_tablet_extra_options">
-                <Link to="" onClick={()=> handleTabletLink("fashion")} className="nav_II_links_hover">Store offers</Link>
-                <Link to="" onClick={()=> handleTabletLink("essentals")} className="nav_II_links_hover">Bestsellers</Link>
-                <Link to={name ? "/genius" : "/login"} onClick={() => handleTabletLink()} className="nav_II_links_hover">Genius</Link>
+            {lessTenH && toggleOptions ?
+            <div className="navII_tablet_extra_options">
+            <Link to="" onClick={()=> handleTabletLink("fashion")} className="nav_II_links_hover">Store offers</Link>
+            <Link to="" onClick={()=> handleTabletLink("essentals")} className="nav_II_links_hover">Bestsellers</Link>
+            <Link to={name ? "/genius" : "/login"} onClick={() => handleTabletLink()} className="nav_II_links_hover">Genius</Link>
             </div>
             : !lessTenH && 
             <>
-                <Link to="" onClick={()=> setSection("fashion")} className="nav_II_links_hover">Store offers</Link>
-                <Link to="" onClick={()=> setSection("essentals")} className="nav_II_links_hover">Bestsellers</Link>
-                <Link to={name ? "/genius" : "/login"} onClick={() => setRedirectPage("genius")} className="nav_II_links_hover">Genius</Link>
+            <Link to="" onClick={()=> setSection("fashion")} className="nav_II_links_hover">Store offers</Link>
+            <Link to="" onClick={()=> setSection("essentals")} className="nav_II_links_hover">Bestsellers</Link>
+            <Link to={name ? "/genius" : "/login"} onClick={() => setRedirectPage("genius")} className="nav_II_links_hover">Genius</Link>
             </>
             }
             
@@ -120,8 +121,6 @@ const handleMenuTablet = () => {
         </Link>
     </div>
   </div>
-    
-    
   )
 }
 

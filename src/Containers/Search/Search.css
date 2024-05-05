@@ -42,9 +42,10 @@
     justify-content: flex-start;
 }
 .search_menu{
-    width: 947px;
+    width: 922px;
     background-color: white;
     margin-top: 10px;
+    margin-left: -4px;
     border-radius: 6px;
     box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.1);
     padding: 10px 15px 0 15px;
@@ -163,7 +164,7 @@
     margin-left: -9px;
 }
 .search_display_mode > .products_main_container:first-child {
-    margin: 9px !important;
+    margin: 5px !important;
 }
 /* no prod found */
 .search_no_prod_found{

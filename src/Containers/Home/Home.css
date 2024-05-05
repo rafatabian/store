@@ -3,8 +3,19 @@
     background-color: var(--off-white);
     padding-bottom:2.5rem;
 }
+.home_sections{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .home_sections > section{
   width: 100%;
+  padding:0 42px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 }
 .home_img_main_container{
     width: 100%;
@@ -283,9 +294,14 @@ responsive design classes
 .home_scrolling_mobile_imgs{
     width: 100vw !important;
 }
-@media screen and (max-width: 1000px){
+ @media screen and (max-width: 1000px){
     .home_bottom_newsletter div:nth-child(2){
         margin-left: 300px;
+    }
+    /* add here */
+    .home_sections > section{
+        max-width: unset;
+        padding: 0 20px;
     }
 }
 .home_newsletters_mobile{
@@ -321,9 +337,6 @@ responsive design classes
     margin-bottom: 20px;
 }
 
-#electronics, #fashion, #discover, #camping, #essentals, #tools, #home{
-    /* add dimensions */
-}
 @media screen and (min-width: 1530px){
     .home_img_conteiner{
         width: 1260px ;
@@ -348,6 +361,7 @@ responsive design classes
         right: calc((100vw -  1500px) / 2 + 22px);
     }
    /*  */
+
    #electronics,
    #home,
    #tools,
@@ -430,4 +444,4 @@ responsive design classes
     .home_bottom_marketplace{
         width: 1190px;
     }
-}
+} 

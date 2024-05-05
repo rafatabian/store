@@ -63,6 +63,18 @@
 .navbar_search_container{
     flex: 1.5;
 }
+.navbar_container_color_line::after{
+    content: '';
+    width: 100vw; 
+    height: 3px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right:0;
+    background: #0082e6;
+    background: -webkit-linear-gradient(left,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
+    background: linear-gradient(to right,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
+} 
 .navbar_search_container input{
     width: 100%;
     height: 37px;
@@ -319,35 +331,9 @@
         scale:0
     }
 }
-.navbar_container_color_line::after{
-    content: '';
-    width: 100vw;
-    height: 3px;
-    position: absolute;
-    bottom: -3px;
-    left: calc(((100vw - 1280px) / 2 ) * -1);
-    right:0;
-    background: #0082e6;
-    background: -webkit-linear-gradient(left,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
-    background: linear-gradient(to right,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
-}
 /* 
 responsive desing
  */
- .navbar_transform_mobile{
-    height: 92px;
-    background-color: #ffffff;
-    padding: 0 10px;
-    align-items: flex-start;
-    justify-content: space-between;
- }
- .navbar_search_bar_container_mobile{
-    position: absolute;
-    height: 56px;
-    width: calc(100vw - 20px);
-    top: 36px;
-    margin: 0;
- }
 .navbar_search_bar_container_mobile input{
     height: 34.67px;
  }
@@ -377,39 +363,12 @@ responsive desing
     z-index: 98;
 }
 
-.navbar_logo_mobile{
-    height: 36px;
-    padding: 7px 7px 0 7px;
-    margin: 0;
-    margin-left: -10px;
-}
-.navbar_logo_mobile svg{
+.navbar_logo_container svg{
     width: 36px;
     height: 36px;
     color: #005eb8;
     margin-right: 4px;
     margin-bottom: 1.5px;
-}
-.navbar_logo_mobile h1{
-    font-size: 31px;
-}
-.navbar_logo_mobile img{
-    width: 24px;
-    height: 24px;
-}
-.navbar_icons_mobile{
-    flex: 0;
-    margin:0;
-    padding-right:0;
-    height: 36px;
-    padding-top: 7px;
-}
-.navbar_icons_mobile svg{
-    width: 20px;
-    height: 20px;
-}
-.navbar_liked_icon_mobile{
-    margin-right: 30px
 }
 .navbar_mobile_blur_menu{
     width: 100vw;
@@ -572,19 +531,22 @@ responsive desing
     .navbar_container{
         width: 1520px !important;
     }
-    .navbar_container_color_line::after{
+    .navbar_container::after{
         left: calc(((100vw - 1520px) / 2) * -1);
     }
 }
 
 @media screen and (max-width: 1300px){
-    .navbar_container_color_line::after{
+    .navbar_container::after{
         left:0 !important
     }
 }
 @media screen and (min-width: 1280px){
      .navbar_container{
-        width: 1280px;
+        /* width: 1280px; */
+        width: 100%;
+        padding-left: calc((100vw - 1280px) / 2);
+        padding-right: calc((100vw - 1280px) / 2);
      }
      .navbar_page_blur{
         width: 200vw;
@@ -592,7 +554,82 @@ responsive desing
         right: 0;
      }
 }
-
+@media screen and (max-width: 750px){
+    .navbar_logo_container{
+        height: 36px;
+        padding: 7px 7px 0 7px;
+        margin: 0;
+        margin-left: -10px;
+    }
+    .navbar_logo_container h1{
+        font-size: 31px;
+    }
+    .navbar_logo_container img{
+        width: 24px;
+        height: 24px;
+    }
+    .navbar_account_name,
+    .navbar_account_icon_noti{
+        display: none;
+    }
+    .navbar_search_container{
+    position: absolute;
+    height: 56px;
+    width: calc(100vw - 20px);
+    top: 36px;
+    margin: 0;
+    }
+    .navbar_container{
+        height: 92px;
+        background-color: #ffffff;
+        padding: 0 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+     }
+/* try to remove this pseudo couse we algeady got a classname for that at the begining of the file */
+    .navbar_container::after{
+        content: '';
+        width: 100vw;
+        height: 3px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right:0;
+        background: #0082e6;
+        background: -webkit-linear-gradient(left,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
+        background: linear-gradient(to right,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
+     } 
+     .navbar_menu_icons{
+        flex: 0;
+        margin:0;
+        padding-right:0;
+        height: 36px;
+        padding-top: 7px;
+     } 
+     .navbar_menu_icons svg{
+        width: 20px;
+        height: 20px;
+    }
+    .navbar_liked_icon_noti{
+        margin-right: 30px
+    }
+    .navbar_page_blur{
+      display: none;
+    }
+}
+@media screen and (max-width: 950px){
+    .navbar_account_name,
+    .navbar_liked_name,
+    .navbar_cart_name{
+        display: none;
+    }
+}
+@media screen and (min-width: 750px){
+   .navbar_showing_menu_icon,
+   .navbar_close_icon{
+    display: none;
+    }
+}
 
 
 

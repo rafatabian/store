@@ -220,3 +220,8 @@ responsive design
         left: calc((100vw - 1280px) / 2 + 42px );
      }
  }
+ @media screen and (max-width: 750px){
+    .nav_II_container{
+        display: none;
+    }
+ }

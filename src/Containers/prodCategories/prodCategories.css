@@ -101,7 +101,6 @@ input[type="range"]::-webkit-slider-thumb{
     width: 100% !important;
 }
 .prodCategories_right_menu div:first-child{
-
     background-color: white;
     margin-top: 10px;
     border-radius: 6px;
@@ -109,7 +108,7 @@ input[type="range"]::-webkit-slider-thumb{
     padding: 10px 15px 0 15px;
     display: flex;
     flex-direction: column;
-    margin-left: 9px;
+    margin-left: 5px;
 }
 .prodCategories_right_menu h1{
     width: 100%;
@@ -193,7 +192,7 @@ input[type="range"]::-webkit-slider-thumb{
     border-radius:  0 4px 4px 0;
 }
 .prodCategories_right_products_cont > .products_main_container:first-child{
-    margin-left: 9px !important;
+    margin-left: 5px !important;
 }
 @media screen and (min-width: 1530px){
     .prodCategories_container{

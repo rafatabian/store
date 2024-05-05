@@ -1,5 +1,6 @@
 .home_section{
     height: 100%;
+    width: 100%;
     margin: 4rem 42px;
     position: relative;
 }
@@ -10,11 +11,9 @@
      letter-spacing: -0.3px;
 }
 .items{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
     scroll-behavior: smooth;
 }
 .items::-webkit-scrollbar{
@@ -33,6 +32,7 @@
     border: 1px solid rgb(230, 230, 230);
     border-radius: 4px;
     transition: 0.1s;
+    z-index: 1;
 }
 #home_R{
   right: -20px;
@@ -55,4 +55,13 @@
 #home_L:hover svg, 
 #home_R:hover svg{
     color:#005fb8
+}
+@media screen and (max-width: 750px){
+    #home_L, 
+    #home_R{
+    display: none;
+}
+.home_sections > section{
+    padding: 0;
+}
 }

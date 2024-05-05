@@ -21,14 +21,11 @@ import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
 
-// const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
-
-// normal import
-import ProductSection from "../../Components/ProdSection/ProdSection"
+const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
 
 
 const Home = ({scrollFromHome}) => {
-  const { section, setSection, mobile, setMobile, lessTenH, setLessTenH} = useContext(LoginContext)
+  const { section, setSection, mobile, lessTenH} = useContext(LoginContext)
   const [position, setPosition] = useState(0)
   const [marginScroll, setMarginScroll] = useState(null)
 
@@ -222,7 +219,7 @@ useEffect(() => {
       </div>
 
     <div className="home_sections">
-      <section id="electronics" style={{width: "100%"}}>
+      <section id="electronics">
         <ProductSection props="electronics"/>
       </section>
       <section id="fashion">

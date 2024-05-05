@@ -135,13 +135,13 @@ const pageWidth = window.innerWidth
 
 if(pageWidth > 1260){
     setMenuPosition(["repeat(4, 1fr)", "flex-start"])
-    setMenuWidth("947px")
+    setMenuWidth("922px")
 }else if(pageWidth < 980){
     setMenuPosition(["repeat(2, 1fr)", "center"])
-    setMenuWidth("464px")
+    setMenuWidth("456px")
 }else if(pageWidth < 1260){
     setMenuPosition(["repeat(3, 1fr)", "flex-start"])
-    setMenuWidth("706px")
+    setMenuWidth("689px")
 }
 }, [])
 

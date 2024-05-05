@@ -35,6 +35,7 @@ const NavBar = ({props, data }) => {
   const location = useLocation()
   const navigate = useNavigate()
 
+  
 // make searchbar empty when going home
 useEffect(() => {
    if(location.pathname === "/"){
@@ -51,8 +52,8 @@ const handleHover = (e) => {
   if(!mobile){
     setHovered(e)
   }
-  
 }  
+
 // check where we are and make notification dissapear
 useEffect(() => {
   if(location.pathname == "/liked"){
@@ -157,13 +158,13 @@ const handleInput = () => {
     setStylesSerachBtn(true)
     }
 }
-
+// when in genius/login/cart props sunt true si apare 2px color line
 
   return (
-    <div className={`navbar_container ${props ? "navbar_container_color_line" : data && "navbar_container_color_line" } ${data && "nav_make_appear"} ${mobile && "navbar_container_color_line navbar_transform_mobile"}`}>
+    <div className={`navbar_container ${props ? "navbar_container_color_line" : data && "navbar_container_color_line" } ${data && "nav_make_appear"} `}>
 
-      <div className={`navbar_logo_container ${mobile && "navbar_logo_mobile"}`}>
-        {mobile && !showMenuu ? <LuMenu  onClick={() => handleMobileMenu()}/> : mobile && showMenuu && <IoClose onClick={() => setShowMenuu(false)}/>}
+      <div className="navbar_logo_container">
+        {!showMenuu ? <LuMenu className="navbar_showing_menu_icon" onClick={() => handleMobileMenu()}/> : showMenuu && <IoClose className="navbar_close_icon" onClick={() => setShowMenuu(false)}/>}
         <Link to="/" onClick={()=> setShowMenuu(false)}>
           <h1>ST</h1>
           <img src={dollarImg} alt="store logo" />
@@ -171,20 +172,19 @@ const handleInput = () => {
         </Link>
       </div>
       {/* mobile version menu */}
-      {mobile && 
-       showMenuu &&
+       {showMenuu &&
        <div className="navbar_mobile_blur_menu" onClick={() => setShowMenuu(false)}>
         <div className="navbar_mobile_links_menu">
-          {mobile && !name ? <div className="navbar_mobile_login">
+          {!name ? <div className="navbar_mobile_login">
             <div>
               <p>Log into your Store account for full control over exclusive offers!</p>
               <Link to="/login" onClick={() =>setRedirectPage("account")}>Create an account</Link>
             </div>
           </div>
-          : mobile && name &&
+          : name &&
           <Link to="your-account"><div><BsPerson /><p>My account</p></div><IoIosArrowForward /></Link>
           }
-          {mobile && !name && <h1>Categories</h1>}
+          {!name && <h1>Categories</h1>}
           <Link to="/products-categories?data=cameras-tech"><div><IoCameraOutline /> <p>Cameras & Tech</p></div> <IoIosArrowForward /></Link>
           <Link to="/products-categories?data=fashion-decorations"><div><IoShirtOutline /> <p>Fashion & Decorations</p></div> <IoIosArrowForward /></Link>
           <Link to="/products-categories?data=sports-camping" onClick={()=> setSection("camping")}><div><IoIosFootball /> <p>Sports & Camping</p> </div><IoIosArrowForward /></Link>
@@ -200,16 +200,16 @@ const handleInput = () => {
       </div>
       }
      
-    <div className={`navbar_search_container ${mobile && "navbar_search_bar_container_mobile"}`}>
+    <div className="navbar_search_container">
       <input type="text" placeholder="Search Products" id="searchBar" onClick={() => handleInput()} onKeyDown={(e)=> handleKeyDown(e.key)} onChange={(e) => setSearchString(e.target.value)} className={stylesSearchBtn ? "input_to_the_top" : ""}/>
       <button onClick={() => searchBtn()} className={`navbar_button_for_searching_prod ${stylesSearchBtn && "button_to_the_top"}`}> 
         <BiSearch />
       </button>
       {
-       !mobile && pageBlur && <span className="navbar_page_blur" onClick={() => setPageBlur(false)} />
+       pageBlur && <span className="navbar_page_blur" onClick={() => setPageBlur(false)} />
       }
       {/* mobile search menu */}
-      {mobile && stylesSearchBtn && 
+      {stylesSearchBtn && 
         <div className="navbar_mobile_search_menu">
           <h1>Popular searches on Store</h1>
           <p onClick={() => handlePopular("sleeve")}>sleeve</p>
@@ -220,16 +220,16 @@ const handleInput = () => {
       }
     </div>
 
-    <div className={`navbar_menu_icons ${mobile && "navbar_icons_mobile"}`}>
+    <div className="navbar_menu_icons">
 {/* account icon */}
-{!mobile &&
+
       <div className="navbar_account" onMouseOver={() => handleHover("account")} onMouseLeave={() => handleHover("")} onClick={() => handleButtonsClick("account")}>
         <Link to={!name ? "/login" : "/your-account"} >
           <div className="navbar_account_icon_noti">
             {hovered === "account" ? <BsFillPersonFill/> : <BsPerson />}
             {accountNoti && <span id="account-noti">!</span>}
           </div>
-          {!lessTenH && <h2>{name ? "Account" : "Sign-up"}</h2>}
+          <h2 className="navbar_account_name" >{name ? "Account" : "Sign-up"}</h2>
         </Link>
 
         {hovered === "account" && !name
@@ -241,18 +241,18 @@ const handleInput = () => {
 
 {/* change the h2 to react based of accound creation in context*/}
       </div>
-}
+
 
 {/* liked icon */}
       <div className="navbar_liked" onMouseOver={() => handleHover("liked")} onMouseLeave={() => handleHover("")} onClick={() => handleButtonsClick("liked")}>
       
          <Link to={name ? "/liked" : "/login"} >
-          <div className={`navbar_liked_icon_noti ${mobile && "navbar_liked_icon_mobile"}`}>
+          <div className="navbar_liked_icon_noti">
             {hovered === "liked" ? <FaHeart /> : <FaRegHeart />}
             {!likedNoti && liked.length !== 0 && <span>{liked.length}</span>}
             {likedNoti && <span className="navbar_popup_link_notification">!</span>}
           </div>
-          {!mobile && !lessTenH && <h2>Liked</h2>}
+           <h2 className="navbar_liked_name">Liked</h2>
 
         </Link>
         {hovered === "liked" &&
@@ -270,7 +270,7 @@ const handleInput = () => {
             {cartProd && cartProd.length !== 0 && <span className="nav_cart_icon">{cartProd.length}</span>}
             {cartNoti && <span className="navbar_popup_link_notification">!</span>}
           </div>
-         {!mobile && !lessTenH && <h2>Cart</h2>}
+          <h2 className="navbar_cart_name">Cart</h2>
         </Link>
         {hovered === "cart" &&
         <div className="navbar_popup_cart">
