@@ -24,7 +24,7 @@ const Nav_II = () => {
     const locationName = location.pathname === "/"
     // 
     useEffect(() => {
-       if(locationName && window.innerWidth > 950){
+       if(locationName){
         setShowMenu(true)
        }else if(locationName !== "/"){
         setShowMenu(false)
@@ -64,7 +64,7 @@ const handleTabletLink = (e) => {
 
 // tablet showMenu click 
 const handleMenuTablet = () => {
-    if(window.innerWidth < 950){
+    if(window.innerWidth < 950 && location.pathname !== "/"){
         setShowMenu(!showMenu)
     }
 }

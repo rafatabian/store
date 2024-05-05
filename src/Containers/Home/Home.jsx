@@ -129,10 +129,10 @@ useEffect(() => {
       }
    }
 
+const vw = window.innerWidth
    useEffect(() => {
-       const vw = window.innerWidth
-        const smallVW = vw - 84
        const imgDiv = document.querySelector(".home_img_conteiner")
+       const imgContWidth = imgDiv.offsetWidth
       if(position == 0){
         imgDiv.scrollLeft = 0
       }else if(position == 1){
@@ -141,12 +141,12 @@ useEffect(() => {
         }else if(vw > 1279){
           imgDiv.scrollLeft = 976
         }else{
-          imgDiv.scrollLeft = lessTenH ? smallVW : mobile ? vw : vw - 304
+          imgDiv.scrollLeft = imgContWidth
         }
       }else{
-        imgDiv.scrollLeft = lessTenH ? 2 * smallVW : mobile ? 2 * vw : 2 * vw - 304
+        imgDiv.scrollLeft = 2 * imgContWidth
       }
-   }, [position])
+   }, [position, vw])
 
    useEffect(() => {
 const trigerImagesToMove = setInterval(() => {
@@ -182,27 +182,27 @@ useEffect(() => {
   return (
     <div className="home_container" style={{marginTop: `${marginScroll ? "56px" : "0"}`}}>
       {/* moving images */}
-      <div className="home_img_main_container" style={{height: (lessTenH || mobile) ? "100%" : null, padding: lessTenH ? "0 42px" : mobile ? 0 : null, marginTop: lessTenH ? "10px" : null}}>
-          <span className="home_img_button_left" onClick={()=> handleArrow("left")} style={{left: mobile ? 0 : lessTenH ? 42 : null}}><MdOutlineArrowForwardIos /></span>
-          <span className="home_img_button_right" onClick={()=> handleArrow("right")} style={{right: mobile ? 0 : null}}><MdOutlineArrowForwardIos /></span>
+      <div className="home_img_main_container">
+          <span className="home_img_button_left" onClick={()=> handleArrow("left")}><MdOutlineArrowForwardIos /></span>
+          <span className="home_img_button_right" onClick={()=> handleArrow("right")}><MdOutlineArrowForwardIos /></span>
         <div className="home_img_conteiner">
         
            <LazyLoadImage 
-           className={lessTenH ? "images_make_responsive" : mobile ? "home_scrolling_mobile_imgs" : ""}
+           className="home_scrolling_mobile_imgs"
            src={home_christmas}
            placeholderSrc={home_christmas_s}
            effect="blur"
            alt="first_home_img"
            />
            <LazyLoadImage 
-          className={lessTenH ? "images_make_responsive" : mobile ? "home_scrolling_mobile_imgs" : ""}
+          className="home_scrolling_mobile_imgs"
            src={home_tree}
            placeholderSrc={home_tree_s}
            effect="blur"
            alt="second_home_img"
            />
            <LazyLoadImage 
-           className={lessTenH ? "images_make_responsive" : mobile ? "home_scrolling_mobile_imgs" : ""}
+           className="home_scrolling_mobile_imgs"
            src={home_shoe}
            placeholderSrc={home_shoe_s}
            effect="blur"
@@ -210,12 +210,12 @@ useEffect(() => {
            />
           
         </div>
-        <div className="home_img_buttons_container" style={{right: mobile ? "calc(50vw - 30px)" : null, bottom: mobile ? 10 : null}}>
+        <div className="home_img_buttons_container">
         <button onClick={() => setPosition(0)} style={position== 0 ?{backgroundColor: "red"} : null}></button>
         <button onClick={() => setPosition(1)} style={position== 1 ?{backgroundColor: "red"} : null}></button>
         <button onClick={() => setPosition(2)} style={position== 2 ?{backgroundColor: "red"} : null}></button>
         </div>
-         <Link to="https://www.emag.ro/" style={{right: mobile ? 10 : null}}>source: emag.ro</Link>
+        <Link className="home_redirect_emag" to="https://www.emag.ro/">source: emag.ro</Link>
       </div>
 
     <div className="home_sections">
@@ -244,7 +244,7 @@ useEffect(() => {
       
 
      <div className="home_bottom_section_conteiner">
-      <div className={`home_bottom_corporate ${mobile ? "home_bottom_corporate_mobile" : null}`} style={{marginBottom: mobile ? 20 : null }}>
+      <div className="home_bottom_corporate">
         <LazyLoadImage
         src={store_corporate}
         placeholderSrc={store_corporate_s}
@@ -253,9 +253,9 @@ useEffect(() => {
         />
       </div>
 
-      <div className={`home_bottom_newsletter ${mobile ? "home_newsletters_mobile" : null}` }>
+      <div className="home_bottom_newsletter">
         <div>
-         {!lessTenH && !mobile && <img src={store_newsletter} alt="newsletter"/>}
+         <img src={store_newsletter} alt="newsletter"/>
         </div>
         <div>
           <h1>Subscribe to the Store newsletter and find out about limited-time discounts!</h1>
@@ -269,25 +269,23 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className={`home_bottom_marketplace ${mobile ? "home_marketplace_mobile" : null}`}>
+      <div className="home_bottom_marketplace">
         <div>
           <span className="home_bottom_marketplace_title"><h1>Store</h1><h2>Marketplace</h2></span>
           <h3>Sell with us!</h3>
-          {!lessTenH && !mobile &&
           <ul>
             <li>Instant access to <span>hundreds of thousands</span> of daily <span>customers</span></li>
             <li>Registration for your business is <span>free</span></li>
             <li>You're just <span>a few clicks away</span> from spectacular sales</li>
           </ul>
-          }
+
           <button>Coming soon!</button>
         </div>
         <div className="home_bottom_marketplace_image_container"> 
-         {!lessTenH && ! mobile && <img src={store_marketplace} />}
+         <img src={store_marketplace} />
         </div>
       </div>
      </div>
-
     </div>
   )
 }

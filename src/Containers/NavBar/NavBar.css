@@ -65,11 +65,12 @@
 }
 .navbar_container_color_line::after{
     content: '';
-    width: 100vw; 
+    /* width TO DO */
+    width: 120vw; 
     height: 3px;
     position: absolute;
     bottom: -3px;
-    left: 0;
+    left: -100px;
     right:0;
     background: #0082e6;
     background: -webkit-linear-gradient(left,#ff1d25 5%,#a0328c 35%,#7040a4 45%,#4359c7 55%,#0082e6 70%);
@@ -123,7 +124,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
     background-color: rgba(0, 0, 0, 0.4);
     animation: navbar_page_blur 0.3s ease forwards;
     z-index: 49;
@@ -543,10 +543,7 @@ responsive desing
 }
 @media screen and (min-width: 1280px){
      .navbar_container{
-        /* width: 1280px; */
-        width: 100%;
-        padding-left: calc((100vw - 1280px) / 2);
-        padding-right: calc((100vw - 1280px) / 2);
+        width: 1280px;
      }
      .navbar_page_blur{
         width: 200vw;
