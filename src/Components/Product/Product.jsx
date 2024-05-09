@@ -42,7 +42,7 @@ const handleProdDetails = (id) => {
 
 
 return(
-    <div className="products_main_container" style={{margin: mobile ? 3 : null}}>
+    <div className="products_main_container">
          <div className="products_like_icon_container"> {/*adds prod to liked when clicked*/}
           {/*props.price[1] > 45 && */}<span>genius</span>
           {liked.includes(props.id)

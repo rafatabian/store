@@ -16,7 +16,7 @@ import store_corporate_s from "../../assets/home_img/store_corporate_s.webp"
 import store_newsletter from "../../assets/home_img/store_newsletter.webp"
 import store_marketplace from "../../assets/home_img/store_marketplace.webp"
 
-import { useState, useContext } from "react"
+import { useState, useContext} from "react"
 import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
@@ -25,7 +25,7 @@ const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSecti
 
 
 const Home = ({scrollFromHome}) => {
-  const { section, setSection, mobile, lessTenH} = useContext(LoginContext)
+  const { section, setSection} = useContext(LoginContext)
   const [position, setPosition] = useState(0)
   const [marginScroll, setMarginScroll] = useState(null)
   const [showMore, setShowMore] = useState(false)
@@ -110,52 +110,52 @@ useEffect(() => {
    setSection("")
 }, [section])
 // moving imgs logic 
-   const handleArrow = (e) => {
-      if(e == "right"){
-        if(position == 0){
-          setPosition(1)
-        }else if(position == 1){
-          setPosition(2)
-        }else{
-          setPosition(0)
-        }
-      }else if(e == "left"){
-         if(position == 0){
-          setPosition(2)
-         }else if(position == 1){
-          setPosition(0)
-         }else{
-          setPosition(1)
-         }
-      }
-   }
+//    const handleArrow = (e) => {
+//       if(e == "right"){
+//         if(position == 0){
+//           setPosition(1)
+//         }else if(position == 1){
+//           setPosition(2)
+//         }else{
+//           setPosition(0)
+//         }
+//       }else if(e == "left"){
+//          if(position == 0){
+//           setPosition(2)
+//          }else if(position == 1){
+//           setPosition(0)
+//          }else{
+//           setPosition(1)
+//          }
+//       }
+//    }
 
-const vw = window.innerWidth
-   useEffect(() => {
-       const imgDiv = document.querySelector(".home_img_conteiner")
-       const imgContWidth = imgDiv.offsetWidth
-      if(position == 0){
-        imgDiv.scrollLeft = 0
-      }else if(position == 1){
-        if(vw > 1529){
-          imgDiv.scrollLeft = 1260
-        }else if(vw > 1279){
-          imgDiv.scrollLeft = 976
-        }else{
-          imgDiv.scrollLeft = imgContWidth
-        }
-      }else{
-        imgDiv.scrollLeft = 2 * imgContWidth
-      }
-   }, [position, vw])
+// const vw = window.innerWidth
+//    useEffect(() => {
+//        const imgDiv = document.querySelector(".home_img_conteiner")
+//        const imgContWidth = imgDiv.offsetWidth
+//       if(position == 0){
+//         imgDiv.scrollLeft = 0
+//       }else if(position == 1){
+//         if(vw > 1529){
+//           imgDiv.scrollLeft = 1260
+//         }else if(vw > 1279){
+//           imgDiv.scrollLeft = 976
+//         }else{
+//           imgDiv.scrollLeft = imgContWidth
+//         }
+//       }else{
+//         imgDiv.scrollLeft = 2 * imgContWidth
+//       }
+//    }, [position, vw])
 
-   useEffect(() => {
-const trigerImagesToMove = setInterval(() => {
-   handleArrow("right")
-}, 5000);
+//    useEffect(() => {
+// const trigerImagesToMove = setInterval(() => {
+//    handleArrow("right")
+// }, 5000);
 
-return () => clearInterval(trigerImagesToMove)
-  }, [position])
+// return () => clearInterval(trigerImagesToMove)
+//   }, [position])
 
 
 // when scrolling down make navbar appear
@@ -229,7 +229,6 @@ useEffect(() => {
       <section id="discover">
         <ProductSection props="discover"/>
       </section>
-      <button onClick={() => setShowMore(!showMore)}>{showMore ? "show less" : "show more"}</button>
       {showMore &&
       <>
       <section id="camping">
@@ -245,6 +244,9 @@ useEffect(() => {
         <ProductSection props="home"/>
       </section>
       </>}
+      {!showMore 
+      ? <button className="home_show_more_btn" onClick={() => setShowMore(true)}>Show More</button>
+      : null}
     </div>
       
 

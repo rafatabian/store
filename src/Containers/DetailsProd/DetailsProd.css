@@ -338,6 +338,7 @@ justify-content: center;
     background: linear-gradient(to right,#4a60c1 10%,#3985e0);
     margin-bottom: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 .detailsProd_buttons button:first-child:hover{
     background: -webkit-linear-gradient(left,#3c55c5 10%,#2377de);
@@ -365,6 +366,7 @@ justify-content: center;
     border: 1.2px solid #005eb8;
     color:#005eb8;
     background-color: white;
+    cursor: pointer;
 }
 .detailsProd_buttons button:nth-child(2):hover{
     background-color: #eff7ff;
