@@ -28,6 +28,7 @@ const Home = ({scrollFromHome}) => {
   const { section, setSection, mobile, lessTenH} = useContext(LoginContext)
   const [position, setPosition] = useState(0)
   const [marginScroll, setMarginScroll] = useState(null)
+  const [showMore, setShowMore] = useState(false)
 
 
 // scroll to top
@@ -228,6 +229,9 @@ useEffect(() => {
       <section id="discover">
         <ProductSection props="discover"/>
       </section>
+      <button onClick={() => setShowMore(!showMore)}>{showMore ? "show less" : "show more"}</button>
+      {showMore &&
+      <>
       <section id="camping">
         <ProductSection props="camping"/>
       </section>
@@ -240,6 +244,7 @@ useEffect(() => {
       <section id="home">
         <ProductSection props="home"/>
       </section>
+      </>}
     </div>
       
 
