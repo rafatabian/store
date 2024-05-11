@@ -45,6 +45,7 @@
     width: 30px;
     height: 30px;
     object-fit: cover;
+
 }
 .navbar_logo_container h1{
     -webkit-background-clip: text;

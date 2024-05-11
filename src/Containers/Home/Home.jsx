@@ -1,18 +1,13 @@
 import "./Home.css"
-import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { lazy } from "react"
 // icons
 import { MdOutlineArrowForwardIos } from "react-icons/md"
 // images 
 import home_christmas  from "../../assets/home_img/home_drinks.webp"
-import home_christmas_s from "../../assets/home_img/home_drinks_s.webp"
 import home_tree from "../../assets/home_img/home_cook.webp"
-import home_tree_s from "../../assets/home_img/home_cook_s.webp"
 import home_shoe from "../../assets/home_img/home_shoe.webp"
-import home_shoe_s from "../../assets/home_img/home_shoe_s.webp"
 import store_corporate from "../../assets/home_img/store_corporate.webp"
-import store_corporate_s from "../../assets/home_img/store_corporate_s.webp"
 import store_newsletter from "../../assets/home_img/store_newsletter.webp"
 import store_marketplace from "../../assets/home_img/store_marketplace.webp"
 
@@ -235,17 +230,12 @@ useEffect(() => {
 
      <div className="home_bottom_section_conteiner">
       <div className="home_bottom_corporate">
-        <LazyLoadImage
-        src={store_corporate}
-        placeholderSrc={store_corporate_s}
-        effect="blur"
-        alt="corporate_business"
-        />
+        <img src={store_corporate} alt="future_projects" fetchPriority="low" />
       </div>
 
       <div className="home_bottom_newsletter">
         <div>
-         <img src={store_newsletter} alt="newsletter"/>
+         <img src={store_newsletter} alt="newsletter" fetchPriority="low"/>
         </div>
         <div>
           <h1>Subscribe to the Store newsletter and find out about limited-time discounts!</h1>
@@ -272,7 +262,7 @@ useEffect(() => {
           <button>Coming soon!</button>
         </div>
         <div className="home_bottom_marketplace_image_container"> 
-         <img src={store_marketplace} />
+         <img src={store_marketplace} fetchPriority="low" alt="selling with Store"/>
         </div>
       </div>
      </div>
