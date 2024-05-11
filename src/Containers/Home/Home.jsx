@@ -110,52 +110,52 @@ useEffect(() => {
    setSection("")
 }, [section])
 // moving imgs logic 
-//    const handleArrow = (e) => {
-//       if(e == "right"){
-//         if(position == 0){
-//           setPosition(1)
-//         }else if(position == 1){
-//           setPosition(2)
-//         }else{
-//           setPosition(0)
-//         }
-//       }else if(e == "left"){
-//          if(position == 0){
-//           setPosition(2)
-//          }else if(position == 1){
-//           setPosition(0)
-//          }else{
-//           setPosition(1)
-//          }
-//       }
-//    }
+   const handleArrow = (e) => {
+      if(e == "right"){
+        if(position == 0){
+          setPosition(1)
+        }else if(position == 1){
+          setPosition(2)
+        }else{
+          setPosition(0)
+        }
+      }else if(e == "left"){
+         if(position == 0){
+          setPosition(2)
+         }else if(position == 1){
+          setPosition(0)
+         }else{
+          setPosition(1)
+         }
+      }
+   }
 
-// const vw = window.innerWidth
-//    useEffect(() => {
-//        const imgDiv = document.querySelector(".home_img_conteiner")
-//        const imgContWidth = imgDiv.offsetWidth
-//       if(position == 0){
-//         imgDiv.scrollLeft = 0
-//       }else if(position == 1){
-//         if(vw > 1529){
-//           imgDiv.scrollLeft = 1260
-//         }else if(vw > 1279){
-//           imgDiv.scrollLeft = 976
-//         }else{
-//           imgDiv.scrollLeft = imgContWidth
-//         }
-//       }else{
-//         imgDiv.scrollLeft = 2 * imgContWidth
-//       }
-//    }, [position, vw])
+const vw = window.innerWidth
+   useEffect(() => {
+       const imgDiv = document.querySelector(".home_img_conteiner")
+       const imgContWidth = imgDiv.offsetWidth
+      if(position == 0){
+        imgDiv.scrollLeft = 0
+      }else if(position == 1){
+        if(vw > 1529){
+          imgDiv.scrollLeft = 1260
+        }else if(vw > 1279){
+          imgDiv.scrollLeft = 976
+        }else{
+          imgDiv.scrollLeft = imgContWidth
+        }
+      }else{
+        imgDiv.scrollLeft = 2 * imgContWidth
+      }
+   }, [position, vw])
 
-//    useEffect(() => {
-// const trigerImagesToMove = setInterval(() => {
-//    handleArrow("right")
-// }, 5000);
+   useEffect(() => {
+const trigerImagesToMove = setInterval(() => {
+   handleArrow("right")
+}, 5000);
 
-// return () => clearInterval(trigerImagesToMove)
-//   }, [position])
+return () => clearInterval(trigerImagesToMove)
+  }, [position])
 
 
 // when scrolling down make navbar appear
@@ -188,28 +188,11 @@ useEffect(() => {
           <span className="home_img_button_right" onClick={()=> handleArrow("right")}><MdOutlineArrowForwardIos /></span>
         <div className="home_img_conteiner">
         
-           <LazyLoadImage 
-           className="home_scrolling_mobile_imgs"
-           src={home_christmas}
-           placeholderSrc={home_christmas_s}
-           effect="blur"
-           alt="first_home_img"
-           />
-           <LazyLoadImage 
-          className="home_scrolling_mobile_imgs"
-           src={home_tree}
-           placeholderSrc={home_tree_s}
-           effect="blur"
-           alt="second_home_img"
-           />
-           <LazyLoadImage 
-           className="home_scrolling_mobile_imgs"
-           src={home_shoe}
-           placeholderSrc={home_shoe_s}
-           effect="blur"
-           alt="third_home_img"
-           />
-          
+          {/*high priority imgs*/}
+          <img src={home_christmas} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
+          <img src={home_tree} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
+          <img src={home_shoe} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
+
         </div>
         <div className="home_img_buttons_container">
         <button onClick={() => setPosition(0)} style={position== 0 ?{backgroundColor: "red"} : null}></button>
