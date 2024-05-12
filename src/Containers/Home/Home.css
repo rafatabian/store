@@ -1,5 +1,6 @@
 .home_container{
     width: 100vw;
+    min-height: 100vh;
     background-color: var(--off-white);
     /* padding-bottom:2.5rem; */
 }
@@ -16,6 +17,7 @@
 }
 .home_sections > section{
   width: 100%;
+  min-height: 403px;
   height: 100%;
   padding:0 42px;
   display: flex;
