@@ -4,9 +4,18 @@ import { lazy } from "react"
 // icons
 import { MdOutlineArrowForwardIos } from "react-icons/md"
 // images 
-import home_christmas  from "../../assets/home_img/home_drinks.webp"
-import home_tree from "../../assets/home_img/home_cook.webp"
+import home_drinks  from "../../assets/home_img/home_drinks.webp"
+import home_drinks_M from "../../assets/home_resized_imgs/home_drinks_M.webp"
+import home_drinks_S from "../../assets/home_resized_imgs/home_drinks_S.webp"
+
+import home_cook from "../../assets/home_img/home_cook.webp"
+import home_cook_M from "../../assets/home_resized_imgs/home_cook_M.webp"
+import home_cook_S from "../../assets/home_resized_imgs/home_cook_S.webp"
+
 import home_shoe from "../../assets/home_img/home_shoe.webp"
+import home_shoe_M from "../../assets/home_resized_imgs/home_shoe_M.webp"
+import home_shoe_S from "../../assets/home_resized_imgs/home_shoe_S.webp"
+
 import store_corporate from "../../assets/home_img/store_corporate.webp"
 import store_newsletter from "../../assets/home_img/store_newsletter.webp"
 import store_marketplace from "../../assets/home_img/store_marketplace.webp"
@@ -184,9 +193,36 @@ useEffect(() => {
         <div className="home_img_conteiner">
         
           {/*high priority imgs*/}
-          <img src={home_christmas} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
-          <img src={home_tree} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
-          <img src={home_shoe} className="home_scrolling_mobile_imgs" alt="presentation-imges" fetchPriority="high"/>
+          <img
+          srcSet={`${home_drinks_S} 480w,
+                  ${home_drinks_M} 800w,
+                  ${home_drinks} 1200w`}
+          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+          src={home_drinks} 
+          className="home_scrolling_mobile_imgs" 
+          alt="presentation-imges" 
+          fetchPriority="high"
+          />
+          <img 
+          srcSet={`${home_cook_S} 480w,
+                   ${home_cook_M} 800w,
+                   ${home_cook} 1200w`}
+          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+          src={home_cook} 
+          className="home_scrolling_mobile_imgs" 
+          alt="presentation-imges" 
+          fetchPriority="high"
+          />
+          <img 
+          srcSet={`${home_shoe_S} 480w,
+                   ${home_shoe_M} 800w,
+                   ${home_shoe} 1200`}
+          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+          src={home_shoe} 
+          className="home_scrolling_mobile_imgs" 
+          alt="presentation-imges"
+          fetchPriority="high"
+          />
 
         </div>
         <div className="home_img_buttons_container">
