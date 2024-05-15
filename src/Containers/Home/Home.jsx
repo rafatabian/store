@@ -33,6 +33,9 @@ const Home = ({scrollFromHome}) => {
   const [position, setPosition] = useState(0)
   const [marginScroll, setMarginScroll] = useState(null)
   const [showMore, setShowMore] = useState(false)
+// TO DO
+//see if the browser shhoses the corect imgs to displaybase on vw
+//make it scroll and add styles for the new images inserted
 
 
 // scroll to top
@@ -195,9 +198,8 @@ useEffect(() => {
           {/*high priority imgs*/}
           <img
           srcSet={`${home_drinks_S} 480w,
-                  ${home_drinks_M} 800w,
-                  ${home_drinks} 1200w`}
-          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+                  ${home_drinks_M} 760w,
+                  ${home_drinks} 1260w`}
           src={home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
@@ -205,9 +207,8 @@ useEffect(() => {
           />
           <img 
           srcSet={`${home_cook_S} 480w,
-                   ${home_cook_M} 800w,
-                   ${home_cook} 1200w`}
-          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+                   ${home_cook_M} 760w,
+                   ${home_cook} 1260w`}
           src={home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
@@ -215,9 +216,8 @@ useEffect(() => {
           />
           <img 
           srcSet={`${home_shoe_S} 480w,
-                   ${home_shoe_M} 800w,
-                   ${home_shoe} 1200`}
-          sizes="(max-width:480px) 480w, (max-width:800px) 800w, 1200w"
+                   ${home_shoe_M} 760w,
+                   ${home_shoe} 1260w`}
           src={home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
