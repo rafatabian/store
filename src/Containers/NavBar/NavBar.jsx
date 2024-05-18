@@ -202,7 +202,7 @@ const handleInput = () => {
      
     <div className="navbar_search_container">
       <input type="text" placeholder="Search Products" id="searchBar" onClick={() => handleInput()} onKeyDown={(e)=> handleKeyDown(e.key)} onChange={(e) => setSearchString(e.target.value)} className={stylesSearchBtn ? "input_to_the_top" : ""}/>
-      <button onClick={() => searchBtn()} className={`navbar_button_for_searching_prod ${stylesSearchBtn && "button_to_the_top"}`}> 
+      <button onClick={() => searchBtn()} className={`navbar_button_for_searching_prod ${stylesSearchBtn && "button_to_the_top"}`} aria-label="Search"> 
         <BiSearch />
       </button>
       {

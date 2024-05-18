@@ -33,9 +33,6 @@ const Home = ({scrollFromHome}) => {
   const [position, setPosition] = useState(0)
   const [marginScroll, setMarginScroll] = useState(null)
   const [showMore, setShowMore] = useState(false)
-// TO DO
-//see if the browser shhoses the corect imgs to displaybase on vw
-//make it scroll and add styles for the new images inserted
 
 
 // scroll to top
@@ -226,9 +223,9 @@ useEffect(() => {
 
         </div>
         <div className="home_img_buttons_container">
-        <button onClick={() => setPosition(0)} style={position== 0 ?{backgroundColor: "red"} : null}></button>
-        <button onClick={() => setPosition(1)} style={position== 1 ?{backgroundColor: "red"} : null}></button>
-        <button onClick={() => setPosition(2)} style={position== 2 ?{backgroundColor: "red"} : null}></button>
+        <button onClick={() => setPosition(0)} style={position== 0 ?{backgroundColor: "red"} : null} aria-label="first section category image"></button>
+        <button onClick={() => setPosition(1)} style={position== 1 ?{backgroundColor: "red"} : null} aria-label="second section category image"></button>
+        <button onClick={() => setPosition(2)} style={position== 2 ?{backgroundColor: "red"} : null} aria-label="third section category image"></button>
         </div>
         <Link className="home_redirect_emag" to="https://www.emag.ro/">source: emag.ro</Link>
       </div>

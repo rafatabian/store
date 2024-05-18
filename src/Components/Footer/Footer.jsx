@@ -90,10 +90,10 @@ useEffect(() => {
           <p>All Rights Reserved.</p>
         </div>
         <div className="footer_socials_container">
-          <button onClick={() => alert("Coming soon!")}><FaInstagram /></button>
-          <button onClick={() => alert("Coming soon!")}><FaFacebookF /></button>
-          <button onClick={() => alert("Coming soon!")}><FaTwitter /></button>
-          <button onClick={() => alert("Coming soon!")}><FaYoutube /></button>
+          <button onClick={() => alert("Coming soon!")} aria-label="Instagram"><FaInstagram /></button>
+          <button onClick={() => alert("Coming soon!")} aria-label="Facebook"><FaFacebookF /></button>
+          <button onClick={() => alert("Coming soon!")} aria-label="Twitter"><FaTwitter /></button>
+          <button onClick={() => alert("Coming soon!")} aria-label="Youtube"><FaYoutube /></button>
         </div>
        </div>
 

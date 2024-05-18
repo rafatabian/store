@@ -52,7 +52,7 @@ return(
         </div>
         
         <div className="products_image_container">
-            <Link to="/details-product" onClick={() => handleProdDetails(props.id)}>
+            <Link to="/details-product" onClick={() => handleProdDetails(props.id)} aria-label="show product">
             <LazyLoadImage
             src={props.image}
             placeholderSrc={props.smallImg}
@@ -67,11 +67,11 @@ return(
         </div>
 
         <div className="products_price_title_review">
-            <Link to="/details-product" onClick={() => handleProdDetails(props.id)} className="product_name_link">
+            <Link to="/details-product" onClick={() => handleProdDetails(props.id)} className="product_name_link" aria-label="show product">
                <h2>{props.name.length > 44 ? props.name.slice(0, 44) + "..." : props.name}</h2> 
             </Link>
             
-            <Link to="/details-product" className="products_review" onClick={() => handleProdDetails(props.id)}>
+            <Link to="/details-product" className="products_review" onClick={() => handleProdDetails(props.id)} aria-label="show product">
                 <FaStar className="products_rewiew_star_icon"/>
                 <FaStar className="products_rewiew_star_icon"/>
                 <FaStar className="products_rewiew_star_icon"/>
@@ -90,7 +90,7 @@ return(
                     <p>{props.price[1]}% OFF</p>
                     <h3>{props.price[0]}£</h3>
                 </span>
-                <Link to="/cart" onClick={() => handleCartClick(props.id)}>
+                <Link to="/cart" onClick={() => handleCartClick(props.id)} aria-label="add product to the cart">
                     <FaShoppingCart />   
                 </Link>
             </div>

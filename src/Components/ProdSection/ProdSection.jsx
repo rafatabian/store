@@ -48,8 +48,8 @@ const handleLeftMove = (e) => {
         <div className="items" ref={prodContainerRef}>
           {loadedprod.map((item) => item.category == `${props}` ? <Product key={item.id + item.price[0]} props={item}/> : null)}
         </div>
-        <button id="home_L"onClick={() => handleLeftMove("L")}><MdOutlineArrowForwardIos /></button> 
-        <button id="home_R"onClick={() => handleLeftMove("R")}><MdOutlineArrowForwardIos /></button>
+        <button id="home_L"onClick={() => handleLeftMove("L")} aria-label="scroll products to the left"><MdOutlineArrowForwardIos /></button> 
+        <button id="home_R"onClick={() => handleLeftMove("R")} aria-label="scroll products to the right"><MdOutlineArrowForwardIos /></button>
       </div>
   )
 }
