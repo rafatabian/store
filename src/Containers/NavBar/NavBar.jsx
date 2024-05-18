@@ -32,6 +32,7 @@ const NavBar = ({props, data }) => {
   const [showMenuu, setShowMenuu] = useState(false)
   // adds styles to the input and search button in mobile version
   const [stylesSearchBtn, setStylesSerachBtn] = useState(false)
+
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -47,23 +48,24 @@ useEffect(() => {
    }
 }, [location.pathname])
 
-// make pop ups appear  
-const handleHover = (e) => {
-  if(!mobile){
-    setHovered(e)
-  }
-}  
-
 // check where we are and make notification dissapear
 useEffect(() => {
-  if(location.pathname == "/liked"){
-    setLikedNoti(false)
-  }else if(location.pathname == "/your-account"){
-    setAccountNoti(false)
-  }else if(location.pathname == "/cart"){
-    setCartNoti(false)
+  switch(location.pathname) {
+    case "/liked":
+      setLikedNoti(false)
+    break;
+    case "/your-account":
+      setAccountNoti(false)
+    break;
+    case "/cart":
+      setCartNoti(false)
+    break;
+    default:
+    break;
   }
-})
+}, [location.pathname])
+
+
 const handleButtonsClick = (e) => {
   setRedirectPage(e)
    if(e === "account"){
@@ -125,17 +127,17 @@ const handlePopular = (e) => {
 }
 
 // check page width and make menu dissapear
-useEffect(() => {
-  const width = window.innerWidth
-  if(width < 750){
-    setMobile(true)
-  }else if(width < 950){
-      setLessTenH(true)
-  }else if(width > 949){
-    setLessTenH(false)
-    setMobile(false) //
-  }
-  }, [])
+// useEffect(() => {
+//   const width = window.innerWidth
+//   if(width < 750){
+//     setMobile(true)
+//   }else if(width < 950){
+//       setLessTenH(true)
+//   }else if(width > 949){
+//     setLessTenH(false)
+//     setMobile(false) //
+//   }
+//   }, [])
 
 // make scroll imposible when menu active
 useEffect(() => {
@@ -158,7 +160,6 @@ const handleInput = () => {
     setStylesSerachBtn(true)
     }
 }
-// when in genius/login/cart props sunt true si apare 2px color line
 
   return (
     <div className={`navbar_container ${props ? "navbar_container_color_line" : data && "navbar_container_color_line" } ${data && "nav_make_appear"} `}>
@@ -223,7 +224,7 @@ const handleInput = () => {
     <div className="navbar_menu_icons">
 {/* account icon */}
 
-      <div className="navbar_account" onMouseOver={() => handleHover("account")} onMouseLeave={() => handleHover("")} onClick={() => handleButtonsClick("account")}>
+      <div className="navbar_account" onMouseOver={() => setHovered("account")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("account")}>
         <Link to={!name ? "/login" : "/your-account"} >
           <div className="navbar_account_icon_noti">
             {hovered === "account" ? <BsFillPersonFill/> : <BsPerson />}
@@ -244,7 +245,7 @@ const handleInput = () => {
 
 
 {/* liked icon */}
-      <div className="navbar_liked" onMouseOver={() => handleHover("liked")} onMouseLeave={() => handleHover("")} onClick={() => handleButtonsClick("liked")}>
+      <div className="navbar_liked" onMouseOver={() => setHovered("liked")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("liked")}>
       
          <Link to={name ? "/liked" : "/login"} >
           <div className="navbar_liked_icon_noti">
@@ -263,7 +264,7 @@ const handleInput = () => {
        </div>
 
 {/* cart icon */}
-       <div className="navbar_cart" onMouseOver={() => handleHover("cart")} onMouseLeave={() => handleHover("")} onClick={() => handleButtonsClick("cart")}>
+       <div className="navbar_cart" onMouseOver={() => setHovered("cart")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("cart")}>
         <Link to="/cart" >
           <div className="navbar_cart_icon_noti">
             {hovered === "cart" ? <RiShoppingCartFill /> : <RiShoppingCartLine />}

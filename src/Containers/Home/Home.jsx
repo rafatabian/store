@@ -200,7 +200,7 @@ useEffect(() => {
           src={home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          fetchPriority="high"
+          fetchpriority="high"
           />
           <img 
           srcSet={`${home_cook_S} 480w,
@@ -209,7 +209,7 @@ useEffect(() => {
           src={home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          fetchPriority="high"
+          fetchpriority="high"
           />
           <img 
           srcSet={`${home_shoe_S} 480w,
@@ -218,7 +218,7 @@ useEffect(() => {
           src={home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
-          fetchPriority="high"
+          fetchpriority="high"
           />
 
         </div>
@@ -263,12 +263,12 @@ useEffect(() => {
 
      <div className="home_bottom_section_conteiner">
       <div className="home_bottom_corporate">
-        <img src={store_corporate} alt="future_projects" fetchPriority="low" />
+        <img src={store_corporate} alt="future_projects" fetchpriority="low" />
       </div>
 
       <div className="home_bottom_newsletter">
         <div>
-         <img src={store_newsletter} alt="newsletter" fetchPriority="low"/>
+         <img src={store_newsletter} alt="newsletter" fetchpriority="low"/>
         </div>
         <div>
           <h1>Subscribe to the Store newsletter and find out about limited-time discounts!</h1>
@@ -295,7 +295,7 @@ useEffect(() => {
           <button>Coming soon!</button>
         </div>
         <div className="home_bottom_marketplace_image_container"> 
-         <img src={store_marketplace} fetchPriority="low" alt="selling with Store"/>
+         <img src={store_marketplace} fetchpriority="low" alt="selling with Store"/>
         </div>
       </div>
      </div>
