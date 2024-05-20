@@ -44,93 +44,22 @@ useEffect(() => {
 
 
 // when clicking the navbarII btns make scoll to the sections
-useEffect(() => {
-  switch(section){
-    case "fashion":
-    const nSection = document.getElementById("fashion")
-    if(nSection){
-      nSection.scrollIntoView({
-        behavior:"smooth"
-      })
+  useEffect(() => {
+    if(section){
+    const targetSection = document.getElementById(section)
+    if(targetSection){
+      targetSection.scrollIntoView({ behavior: "smooth" })
     }
-    break;
+   }
+  }, [section, setSection])
 
-    case "electronics":
-    const fSection = document.getElementById("electronics")
-    if(fSection){
-      fSection.scrollIntoView({
-        behavior:"smooth" 
-      })
-    }
-    break;
 
-    case "camping":
-    const sSection = document.getElementById("camping")
-    if(sSection){
-      sSection.scrollIntoView({
-        behavior:"smooth" 
-      })
-    }
-    break;
-
-    case "home":
-    const hSection = document.getElementById("home")
-    if(hSection){
-      hSection.scrollIntoView({
-        behavior:"smooth" 
-      })
-    }
-    break;
-
-    case "essentals":
-    const eSection = document.getElementById("essentals")
-    if(eSection){
-      eSection.scrollIntoView({
-        behavior:"smooth" 
-      })
-    }
-    break;
-
-    case "discover":
-      const dSection = document.getElementById("discover")
-      if(dSection){
-        dSection.scrollIntoView({
-          behavior:"smooth" 
-        })
-      }
-      break;
-
-      case "tools":
-      const tSection = document.getElementById("tools")
-      if(tSection){
-        tSection.scrollIntoView({
-          behavior:"smooth" 
-        })
-      }
-      break;
-  }
-  
-
-   setSection("")
-}, [section])
 // moving imgs logic 
    const handleArrow = (e) => {
       if(e == "right"){
-        if(position == 0){
-          setPosition(1)
-        }else if(position == 1){
-          setPosition(2)
-        }else{
-          setPosition(0)
-        }
-      }else if(e == "left"){
-         if(position == 0){
-          setPosition(2)
-         }else if(position == 1){
-          setPosition(0)
-         }else{
-          setPosition(1)
-         }
+        setPosition(position === 2 ? 0 : position + 1)
+      }else{
+        setPosition(position === 0 ? 2 : position - 1) 
       }
    }
 

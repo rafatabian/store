@@ -358,6 +358,7 @@ responsive desing
     border-radius: unset !important;
     border: none !important;
     border-bottom: 1px solid #ccc !important;
+    z-index: 99 !important;
 }
 .navbar_search_bar_container_mobile button{
     height: 34.67px;

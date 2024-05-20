@@ -20,7 +20,7 @@ import { RiShoppingCartLine, RiShoppingCartFill } from "react-icons/ri"
 
 
 const NavBar = ({props, data }) => {
-  const {name, redirectPage, setRedirectPage, premGenius, liked, cartProd, mobile, setMobile, lessTenH, setLessTenH, setSection }  = useContext(LoginContext)
+  const {name, redirectPage, setRedirectPage, premGenius, liked, cartProd, setSection }  = useContext(LoginContext)
 
   const [pageBlur, setPageBlur] = useState(null)
   const [hovered, setHovered] = useState("")
@@ -90,13 +90,12 @@ const handleMobileMenu = () => {
     }
 }
 
-
 // listen for page scroll to make the blur disappear  
 useEffect(() => {
-   window.addEventListener("scroll", () => {  
-    setPageBlur(false)    
-  })
-})
+  const handleScroll  = () => setPageBlur(false)
+   window.addEventListener("scroll", handleScroll)
+   return () => window.removeEventListener("scroll", handleScroll)
+}, [])
 
 
 // redirect to login pannel 
@@ -142,23 +141,16 @@ const handlePopular = (e) => {
 // make scroll imposible when menu active
 useEffect(() => {
    const body = document.querySelector("body")
-
-    if(showMenuu || stylesSearchBtn){
-      if(body){
-        body.style.overflow= "hidden"
-      }
-    }else{
-      body.style.overflow= "visible"
-    }
+   body.style.overflow = showMenuu || stylesSearchBtn ? "hidden" : "visible"
 }, [showMenuu, stylesSearchBtn])
 
 // when clicking the searchbar
 const handleInput = () => {
      setPageBlur(true)
 //  add class for the search button in mobile verison
-    if(mobile){
+  if(window.innerWidth < 750){
     setStylesSerachBtn(true)
-    }
+  }
 }
 
   return (
@@ -168,7 +160,7 @@ const handleInput = () => {
         {!showMenuu ? <LuMenu className="navbar_showing_menu_icon" onClick={() => handleMobileMenu()}/> : showMenuu && <IoClose className="navbar_close_icon" onClick={() => setShowMenuu(false)}/>}
         <Link to="/" onClick={()=> setShowMenuu(false)}>
           <h1>ST</h1>
-          <img src={dollarImg} alt="store logo" />
+          <img src={dollarImg} alt="store logo" fetchpriority="high"/>
           <h1>RE</h1>
         </Link>
       </div>
@@ -239,7 +231,6 @@ const handleInput = () => {
         ? <ExistingAcc /> 
         : ""}
         
-
 {/* change the h2 to react based of accound creation in context*/}
       </div>
 

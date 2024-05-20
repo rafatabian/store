@@ -151,50 +151,6 @@ pop up nav_II menu
 /* 
 responsive design
  */
- .navII_tablet_extra_options{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 130px;
-    left: 350px;
-    background-color: white;
-    border-radius: 6px;
- }
-.navII_tablet_extra_options a{
-    color:#222222 !important;
-    width: 160px;
-    border-radius: unset;
-    margin-right: unset;
- }
- .navII_tablet_extra_options a:hover{
-    background-color: #eee;
- }
- .navII_tablet_show_more_btn{
-    background-color: unset;
-    border: unset;
-    color: var(--off-white);
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    padding: 6px 10px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
- }
- .navII_tablet_show_more_btn svg{
-    width: 17px;
-    height: 17px;
-    color: var(--off-white);
-    margin-top: 1.5px;
- }
- .navII_tablet_show_more_btn:hover{
-    border: 1px solid var(--off-white)
- }
  @media screen and (min-width: 1530px){
     .navII_width{
         width: 1520px !important;
@@ -222,6 +178,11 @@ responsive design
  }
  @media screen and (max-width: 750px){
     .nav_II_container{
+        display: none;
+    }
+ }
+ @media screen and (max-width:820px){
+    .nav_II_help_btn{
         display: none;
     }
  }
