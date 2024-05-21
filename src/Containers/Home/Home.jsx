@@ -123,7 +123,7 @@ useEffect(() => {
         
           {/*high priority imgs*/}
           <img
-          srcSet={`${home_drinks_S} 480w,
+           srcSet={`
                   ${home_drinks_M} 760w,
                   ${home_drinks} 1260w`}
           src={home_drinks} 
@@ -132,7 +132,7 @@ useEffect(() => {
           fetchpriority="high"
           />
           <img 
-          srcSet={`${home_cook_S} 480w,
+          srcSet={`
                    ${home_cook_M} 760w,
                    ${home_cook} 1260w`}
           src={home_cook} 
@@ -141,7 +141,7 @@ useEffect(() => {
           loading="lazy"
           />
           <img 
-          srcSet={`${home_shoe_S} 480w,
+          srcSet={`
                    ${home_shoe_M} 760w,
                    ${home_shoe} 1260w`}
           src={home_shoe} 
