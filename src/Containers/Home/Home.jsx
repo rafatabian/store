@@ -123,7 +123,7 @@ useEffect(() => {
         
           {/*high priority imgs*/}
           <img
-           srcSet={`
+           srcSet={`${home_drinks_S} 480w,
                   ${home_drinks_M} 760w,
                   ${home_drinks} 1260w`}
           src={home_drinks} 
@@ -132,22 +132,22 @@ useEffect(() => {
           fetchpriority="high"
           />
           <img 
-          srcSet={`
+          srcSet={`${home_cook_S} 480w,
                    ${home_cook_M} 760w,
                    ${home_cook} 1260w`}
           src={home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          loading="lazy"
+          // loading="lazy"
           />
           <img 
-          srcSet={`
+          srcSet={`${home_shoe_S} 480w,
                    ${home_shoe_M} 760w,
                    ${home_shoe} 1260w`}
           src={home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
-          loading="lazy"
+          // loading="lazy"
           />
 
         </div>
