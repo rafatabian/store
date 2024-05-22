@@ -129,7 +129,7 @@ useEffect(() => {
           src={home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          // fetchpriority="high"
+          fetchpriority="high"
           />
           <img 
           srcSet={`${home_cook_S} 480w,
