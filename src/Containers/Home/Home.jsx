@@ -128,7 +128,7 @@ useEffect(() => {
           src={home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          fetchpriority="high"
+          // fetchpriority="high"
           />
           <img 
           srcSet={`${home_cook_S} 480w,
@@ -137,6 +137,7 @@ useEffect(() => {
           src={home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
+          loading="lazy"
           />
           <img
           srcSet={`${home_shoe_S} 480w,
@@ -145,6 +146,7 @@ useEffect(() => {
           src={home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
+          loading="lazy"
           />
 
         </div>
