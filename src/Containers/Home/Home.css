@@ -98,10 +98,10 @@
     z-index: 10;
 }
 .home_img_buttons_container button{
-    margin:5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    margin: 5px;    
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
     border: 0;
     background-color: white;
     transition: 0.1s;
