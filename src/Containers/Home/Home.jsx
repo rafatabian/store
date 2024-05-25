@@ -131,23 +131,23 @@ useEffect(() => {
           alt="presentation-imges" 
           // fetchpriority="high"
           />
-          <LazyLoadImage
+          <img
           // srcSet={`${home_cook_S} 480w,
           //          ${home_cook_M} 760w,
           //          ${home_cook} 1260w`}
           src={window.innerWidth <= 480 ? home_cook_S : window.innerWidth <= 760  ? home_cook_M : home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          // loading="lazy"
+          loading="lazy"
           />
-          <LazyLoadImage
+          <img
           // srcSet={`${home_shoe_S} 480w,
           //          ${home_shoe_M} 760w,
           //          ${home_shoe} 1260w`}
           src={window.innerWidth <= 480 ? home_shoe_S : window.innerWidth <= 760 ? home_shoe_M : home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
-          // loading="lazy"
+          loading="lazy"
           />
 
         </div>
