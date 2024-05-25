@@ -180,7 +180,7 @@ const closeFromChild = (e) => {
         <div className="detailsProd_main_content">
            <h1>{item.name}</h1>
           {item.store && <Link to={item.store} className="detailsProd_link">Visit the official store</Link>}
-          <div className="products_review" style={{borderTop: border ? "10px solid #f4f4f4" : null }}>
+          <div className="details_products_review" style={{borderTop: border ? "10px solid #f4f4f4" : null }}>
                 <FaStar className="products_review_star"/>
                 <FaStar className="products_review_star"/>
                 <FaStar className="products_review_star"/>

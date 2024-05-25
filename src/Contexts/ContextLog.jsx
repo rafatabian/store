@@ -28,16 +28,11 @@ export const LoginFunction = ({children}) => {
     // product id 
     const [prodID, setProdID] = useState(0)
     // navbar button clicked to redirect from login
-// TO DO the redirect function if not wokring  properly when refreshin the page
     const [redirectPage, setRedirectPage] = useState("")
-    // TO DO save profile photo url
     // screll to sections
     const [section, setSection] = useState("")
-    // mobile verison
-    const [mobile, setMobile] = useState(false)
-    const [lessTenH, setLessTenH] = useState(false)
 
-return(<LoginContext.Provider value={{year, setYear, month, setMonth, day, setDay, name, setName, localImg, setLocalImg, alias, setAlias, email, setEmail, phoneNr, setPhoneNr, showSettings, setShowSettings, liked, setLiked, premGenius, setPremGenius, cartProd, setCartProd, prodID, setProdID, redirectPage, setRedirectPage, productHistory, setProductHistory, section, setSection, mobile, setMobile, lessTenH, setLessTenH, reviewNr, setReviewNr}}>
+return(<LoginContext.Provider value={{year, setYear, month, setMonth, day, setDay, name, setName, localImg, setLocalImg, alias, setAlias, email, setEmail, phoneNr, setPhoneNr, showSettings, setShowSettings, liked, setLiked, premGenius, setPremGenius, cartProd, setCartProd, prodID, setProdID, redirectPage, setRedirectPage, productHistory, setProductHistory, section, setSection, reviewNr, setReviewNr}}>
     {children}
     </LoginContext.Provider>)
 }

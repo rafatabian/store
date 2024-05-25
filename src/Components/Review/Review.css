@@ -36,6 +36,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    flex: 1;
 }
 .review_image{
     height: 100%;
@@ -51,6 +52,7 @@
 }
 .review_title_title{
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start !important;
@@ -68,6 +70,7 @@
     color: #005eb8;
     letter-spacing: 0.4px;
     margin-left: 0;
+    min-width: 100%;
 }
 .review_close_icon{
     height: 100%;
@@ -156,6 +159,9 @@
     letter-spacing: 0.3px;
     color: #222222;
     margin-bottom: 10px;
+}
+.review_main_review > p{
+    min-width: 100%;
 }
 .review_title_riveiw input{
     display: block;

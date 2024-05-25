@@ -127,7 +127,7 @@ const handleSave = () => {
                 </div>
                 <div className="review_title_title">
                     <h1>Add a review for:</h1> 
-                    <p className="">{props.name.slice(0, 60)}...</p>
+                    <p>{props.name.slice(0, 60)}...</p>
                 </div>
             </div>
             <div className="review_close_icon" onClick={() => closeFromChild(false)}>
@@ -173,7 +173,7 @@ const handleSave = () => {
                 {errMessage === "contentLength" ?<h2 className="review_textarea_error">Please add a longer product description</h2> : null}
                 <p>Experiencing issues with the product or delivery? Submit a report</p>
                 <p>By submitting the review, you agree to the terms and conditions of the website</p>
-                </div>
+            </div>
 
             <button className="review_submit_button" onClick={() => handleSave()}>Add review</button>
           </div>
