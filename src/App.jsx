@@ -5,11 +5,8 @@ import { LoginFunction } from "./Contexts/ContextLog"
 import { AiOutlineLoading } from "react-icons/ai"
 
 
-// const NavBar = lazy(() => import("./Containers/NavBar/NavBar"))
-// const Home = lazy(() => import("./Containers/Home/Home"))
-import NavBar from "./Containers/NavBar/NavBar"
-import Home from "./Containers/Home/Home"
-
+const NavBar = lazy(() => import("./Containers/NavBar/NavBar"))
+const Home = lazy(() => import("./Containers/Home/Home"))
 const Nav_II = lazy(() => import("./Components/Nav_II/Nav_II"))
 const Footer = lazy(() => import("./Components/Footer/Footer"))
 const Liked = lazy(() => import("./Containers/Liked/Liked"))
