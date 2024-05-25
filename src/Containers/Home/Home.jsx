@@ -129,7 +129,7 @@ useEffect(() => {
           src={window.innerWidth <= 480 ? home_drinks_S : window.innerWidth <= 760 ? home_drinks_M : home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          fetchpriority="high"
+          // fetchpriority="high"
           />
           <LazyLoadImage
           // srcSet={`${home_cook_S} 480w,
