@@ -34,26 +34,6 @@ const Home = ({scrollFromHome}) => {
   const [marginScroll, setMarginScroll] = useState(null)
   const [showMore, setShowMore] = useState(false)
 
-// preloaing 3 imgs
-useEffect(() => {
-  const preloadImage = (href, media) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = href;
-    link.media = media;
-    document.head.appendChild(link);
-  };
-
-  const vw = window.innerWidth;
-  if (vw <= 480) {
-    preloadImage(home_drinks_S, '(max-width: 480px)');
-  } else if (vw <= 760) {
-    preloadImage(home_drinks_M, '(min-width: 481px) and (max-width: 760px)');
-  } else {
-    preloadImage(home_drinks, '(min-width: 761px)');
-  }
-}, []);
 
 // scroll to top
 useEffect(() => {
@@ -143,32 +123,32 @@ useEffect(() => {
         
           {/*high priority imgs*/}
            <img
-           srcSet={`${home_drinks_S} 480w,
-                  ${home_drinks_M} 760w,
-                  ${home_drinks} 1260w`}
-          src={home_drinks} 
+          //  srcSet={`${home_drinks_S} 480w,
+          //         ${home_drinks_M} 760w,
+          //         ${home_drinks} 1260w`}
+          src={window.innerWidth <= 480 ? home_drinks_S : window.innerWidth <= 760 ? home_drinks_M : home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
           fetchpriority="high"
           />
           <LazyLoadImage
-          srcSet={`${home_cook_S} 480w,
-                   ${home_cook_M} 760w,
-                   ${home_cook} 1260w`}
-          src={home_cook} 
+          // srcSet={`${home_cook_S} 480w,
+          //          ${home_cook_M} 760w,
+          //          ${home_cook} 1260w`}
+          src={window.innerWidth <= 480 ? home_cook_S : window.innerWidth <= 760  ? home_cook_M : home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
           // loading="lazy"
           />
           <LazyLoadImage
-          srcSet={`${home_shoe_S} 480w,
-                   ${home_shoe_M} 760w,
-                   ${home_shoe} 1260w`}
-          src={home_shoe} 
+          // srcSet={`${home_shoe_S} 480w,
+          //          ${home_shoe_M} 760w,
+          //          ${home_shoe} 1260w`}
+          src={window.innerWidth <= 480 ? home_shoe_S : window.innerWidth <= 760 ? home_shoe_M : home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
           // loading="lazy"
-          /> 
+          />
 
         </div>
         <div className="home_img_buttons_container">

@@ -22,11 +22,37 @@ const Search = lazy(() => import("./Containers/Search/Search"))
 const Orders = lazy(() => import("./Components/Orders/Orders"))
 const SeeReview = lazy(() => import("./Containers/SeeReview/SeeReview"))
 
+  import home_drinks  from "./assets/home_img/home_drinks.webp"
+  import home_drinks_M from "./assets/home_resized_imgs/home_drinks_M.webp"
+  import home_drinks_S from "./assets/home_resized_imgs/home_drinks_S.webp"
 
 const App = () => {
   const [path, setPath] = useState(true)
   const [showFooter, setShowFooter] = useState(null)
   const [dataFromHome, setDataFromHome] = useState(null)
+
+
+  // preloaing 3 imgs from home
+useEffect(() => {
+  const preloadImage = (href, media) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = href;
+    link.media = media;
+    document.head.appendChild(link);
+  };
+
+  const vw = window.innerWidth;
+  if (vw <= 480) {
+    preloadImage(home_drinks_S, '(max-width: 480px)');
+  } else if (vw <= 760) {
+    preloadImage(home_drinks_M, '(min-width: 481px) and (max-width: 760px)');
+    console.log("runs M")
+  } else {
+    preloadImage(home_drinks, '(min-width: 761px)');
+  }
+}, []);
 
   // conditionally render the navbar
   const location = useLocation()
