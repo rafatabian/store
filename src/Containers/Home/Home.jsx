@@ -23,7 +23,6 @@ import { useState, useContext} from "react"
 import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
-import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
 
@@ -123,27 +122,17 @@ useEffect(() => {
         
           {/*high priority imgs*/}
            <img
-          //  srcSet={`${home_drinks_S} 480w,
-          //         ${home_drinks_M} 760w,
-          //         ${home_drinks} 1260w`}
           src={window.innerWidth <= 480 ? home_drinks_S : window.innerWidth <= 760 ? home_drinks_M : home_drinks} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          // fetchpriority="high"
           />
           <img
-          // srcSet={`${home_cook_S} 480w,
-          //          ${home_cook_M} 760w,
-          //          ${home_cook} 1260w`}
           src={window.innerWidth <= 480 ? home_cook_S : window.innerWidth <= 760  ? home_cook_M : home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
           loading="lazy"
           />
           <img
-          // srcSet={`${home_shoe_S} 480w,
-          //          ${home_shoe_M} 760w,
-          //          ${home_shoe} 1260w`}
           src={window.innerWidth <= 480 ? home_shoe_S : window.innerWidth <= 760 ? home_shoe_M : home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"

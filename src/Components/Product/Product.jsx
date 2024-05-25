@@ -53,11 +53,16 @@ return(
         
         <div className="products_image_container">
             <Link to="/details-product" onClick={() => handleProdDetails(props.id)} aria-label="show product">
-            <LazyLoadImage
+            {/* <LazyLoadImage
             src={props.image}
             placeholderSrc={props.smallImg}
             effect="blur"
             alt="products"
+            /> */}
+            <img 
+            src={props.image}
+            alt="product"
+            loading="lazy"
             />
             </Link>
             <div>
