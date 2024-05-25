@@ -23,6 +23,7 @@ import { useState, useContext} from "react"
 import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
 
@@ -130,23 +131,23 @@ useEffect(() => {
           alt="presentation-imges" 
           // fetchpriority="high"
           />
-          <img 
+          <LazyLoadImage
           srcSet={`${home_cook_S} 480w,
                    ${home_cook_M} 760w,
                    ${home_cook} 1260w`}
           src={home_cook} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
-          loading="lazy"
+          // loading="lazy"
           />
-          <img
+          <LazyLoadImage
           srcSet={`${home_shoe_S} 480w,
                    ${home_shoe_M} 760w,
                    ${home_shoe} 1260w`}
           src={home_shoe} 
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges"
-          loading="lazy"
+          // loading="lazy"
           />
 
         </div>
