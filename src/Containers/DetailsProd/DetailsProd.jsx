@@ -3,7 +3,7 @@ import { useEffect, useContext, useState, lazy } from "react"
 import { LoginContext } from "../../Contexts/ContextLog"
 import { products } from "../../assets/products"
 import { LazyLoadImage } from "react-lazy-load-image-component"
-import "react-lazy-load-image-component/src/effects/blur.css"
+// import "react-lazy-load-image-component/src/effects/blur.css"
 import { FaStar, FaStarHalf, FaHeart, FaRegStar, FaShoppingCart, FaRegHeart } from "react-icons/fa" 
 import { FaTruck, FaCheck } from "react-icons/fa6"
 import { RiDeleteBin6Line } from "react-icons/ri"
@@ -162,11 +162,15 @@ const closeFromChild = (e) => {
      <div key={item.id + item.price[0]} className="detailsProd_main_container">
       
         <div className="detailsProd_image_container">
-          <LazyLoadImage
+          {/* <LazyLoadImage
           src={item.image}
           placeholderSrc={item.smallImg}
           effect="blur"
           alt="product details"
+          /> */}
+          <img
+           src={item.image}
+           alt="product details"
           />
           <div className="detailsProd_flags">
               <div className="detailsProd_genius">Genius</div>

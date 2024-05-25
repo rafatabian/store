@@ -1,12 +1,11 @@
 import "./Product.css"
 import { FaRegHeart, FaHeart, FaWallet, FaShoppingCart, FaStar, FaStarHalf } from "react-icons/fa"
-import { LazyLoadImage } from "react-lazy-load-image-component"
 import { LoginContext } from "../../Contexts/ContextLog"
 import { useEffect, useState, useContext} from "react"
 import { Link } from "react-router-dom"
 
 const Product = ({props}) => {
-    const {liked, setLiked, setProdID, cartProd, setCartProd, mobile} = useContext(LoginContext)
+    const {liked, setLiked, setProdID, cartProd, setCartProd} = useContext(LoginContext)
     const [random, setRandom] = useState(0)
     const [buyers, setBuyers] = useState(0)
 
@@ -53,12 +52,6 @@ return(
         
         <div className="products_image_container">
             <Link to="/details-product" onClick={() => handleProdDetails(props.id)} aria-label="show product">
-            {/* <LazyLoadImage
-            src={props.image}
-            placeholderSrc={props.smallImg}
-            effect="blur"
-            alt="products"
-            /> */}
             <img 
             src={props.image}
             alt="product"
