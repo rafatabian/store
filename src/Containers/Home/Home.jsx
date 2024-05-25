@@ -1,5 +1,4 @@
 import "./Home.css"
-import "react-lazy-load-image-component/src/effects/blur.css"
 import { lazy } from "react"
 // icons
 import { MdOutlineArrowForwardIos } from "react-icons/md"
@@ -24,7 +23,6 @@ import { useState, useContext} from "react"
 import { useEffect } from "react"
 import { Link, } from "react-router-dom"
 import { LoginContext } from "../../Contexts/ContextLog"
-import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const ProductSection = lazy(() => import("../../Components/ProdSection/ProdSection"))
 
@@ -132,7 +130,7 @@ useEffect(() => {
           alt="presentation-imges" 
           fetchpriority="high"
           />
-          <LazyLoadImage 
+          <img 
           srcSet={`${home_cook_S} 480w,
                    ${home_cook_M} 760w,
                    ${home_cook} 1260w`}
@@ -140,7 +138,7 @@ useEffect(() => {
           className="home_scrolling_mobile_imgs" 
           alt="presentation-imges" 
           />
-          <LazyLoadImage
+          <img
           srcSet={`${home_shoe_S} 480w,
                    ${home_shoe_M} 760w,
                    ${home_shoe} 1260w`}

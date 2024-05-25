@@ -158,7 +158,7 @@ const handleInput = () => {
 
       <div className="navbar_logo_container">
         {!showMenuu ? <LuMenu className="navbar_showing_menu_icon" onClick={() => handleMobileMenu()}/> : showMenuu && <IoClose className="navbar_close_icon" onClick={() => setShowMenuu(false)}/>}
-        <Link to="/" onClick={()=> setShowMenuu(false)}>
+        <Link to="/" onClick={()=> setShowMenuu(false)} aria-label="home">
           <h1>ST</h1>
           <img src={dollarImg} alt="store logo" fetchpriority="high"/>
           <h1>RE</h1>
@@ -171,24 +171,24 @@ const handleInput = () => {
           {!name ? <div className="navbar_mobile_login">
             <div>
               <p>Log into your Store account for full control over exclusive offers!</p>
-              <Link to="/login" onClick={() =>setRedirectPage("account")}>Create an account</Link>
+              <Link to="/login" onClick={() =>setRedirectPage("account")} aria-label="create an account">Create an account</Link>
             </div>
           </div>
           : name &&
-          <Link to="your-account"><div><BsPerson /><p>My account</p></div><IoIosArrowForward /></Link>
+          <Link to="your-account" aria-label="your account"><div><BsPerson /><p>My account</p></div><IoIosArrowForward /></Link>
           }
           {!name && <h1>Categories</h1>}
-          <Link to="/products-categories?data=cameras-tech"><div><IoCameraOutline /> <p>Cameras & Tech</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=fashion-decorations"><div><IoShirtOutline /> <p>Fashion & Decorations</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=sports-camping" onClick={()=> setSection("camping")}><div><IoIosFootball /> <p>Sports & Camping</p> </div><IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=home-bedroom" onClick={()=> setSection("home")}><div><IoHomeOutline /> <p>Home & Bedroom</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=music-entertainment" onClick={()=> setSection("electronics")}><div><IoMusicalNoteOutline /> <p>Music & Entertainment</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=essential" onClick={()=> setSection("essentals")}><div><IoBagCheckOutline /> <p>Essentials</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=discover-products" onClick={()=> setSection("discover")}><div><FaQuestion /> <p>Discover Products</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=teeth-care"><div><IoSparklesOutline /> <p>Teeth Care</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=tools"><div><IoHammerOutline /> <p>Tools</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=christmas" onClick={()=> setSection("home")}><div><BsTree /> <p>Christmas</p></div> <IoIosArrowForward /></Link>
-          <Link to="/products-categories?data=relax-selfcare" onClick={()=> setSection("fashion")}><div><LuShowerHead /> <p>Relax & Selfcare</p></div> <IoIosArrowForward /></Link> 
+          <Link to="/products-categories?data=cameras-tech" aria-label="tech"><div><IoCameraOutline /> <p>Cameras & Tech</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=fashion-decorations" aria-label="fashion"><div><IoShirtOutline /> <p>Fashion & Decorations</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=sports-camping" onClick={()=> setSection("camping")} aria-label="sports"><div><IoIosFootball /> <p>Sports & Camping</p> </div><IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=home-bedroom" onClick={()=> setSection("home")} aria-label="bedroom"><div><IoHomeOutline /> <p>Home & Bedroom</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=music-entertainment" onClick={()=> setSection("electronics")} aria-label="entertainment"><div><IoMusicalNoteOutline /> <p>Music & Entertainment</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=essential" onClick={()=> setSection("essentals")} aria-label="essentials"><div><IoBagCheckOutline /> <p>Essentials</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=discover-products" onClick={()=> setSection("discover")} aria-label="discover"><div><FaQuestion /> <p>Discover Products</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=teeth-care" aria-label="oral hygiene"><div><IoSparklesOutline /> <p>Teeth Care</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=tools" aria-label="tools"><div><IoHammerOutline /> <p>Tools</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=christmas" onClick={()=> setSection("home")} aria-label="christmas"><div><BsTree /> <p>Christmas</p></div> <IoIosArrowForward /></Link>
+          <Link to="/products-categories?data=relax-selfcare" onClick={()=> setSection("fashion")} aria-label="selfcare"><div><LuShowerHead /> <p>Relax & Selfcare</p></div> <IoIosArrowForward /></Link> 
         </div>
       </div>
       }
@@ -217,7 +217,7 @@ const handleInput = () => {
 {/* account icon */}
 
       <div className="navbar_account" onMouseOver={() => setHovered("account")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("account")}>
-        <Link to={!name ? "/login" : "/your-account"} >
+        <Link to={!name ? "/login" : "/your-account"} aria-label="account">
           <div className="navbar_account_icon_noti">
             {hovered === "account" ? <BsFillPersonFill/> : <BsPerson />}
             {accountNoti && <span id="account-noti">!</span>}
@@ -238,7 +238,7 @@ const handleInput = () => {
 {/* liked icon */}
       <div className="navbar_liked" onMouseOver={() => setHovered("liked")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("liked")}>
       
-         <Link to={name ? "/liked" : "/login"} >
+         <Link to={name ? "/liked" : "/login"} aria-label="liked product">
           <div className="navbar_liked_icon_noti">
             {hovered === "liked" ? <FaHeart /> : <FaRegHeart />}
             {!likedNoti && liked.length !== 0 && <span>{liked.length}</span>}
@@ -256,7 +256,7 @@ const handleInput = () => {
 
 {/* cart icon */}
        <div className="navbar_cart" onMouseOver={() => setHovered("cart")} onMouseLeave={() => setHovered("")} onClick={() => handleButtonsClick("cart")}>
-        <Link to="/cart" >
+        <Link to="/cart" aria-label="cart">
           <div className="navbar_cart_icon_noti">
             {hovered === "cart" ? <RiShoppingCartFill /> : <RiShoppingCartLine />}
             {cartProd && cartProd.length !== 0 && <span className="nav_cart_icon">{cartProd.length}</span>}
@@ -269,7 +269,7 @@ const handleInput = () => {
           <h1>Add products to the cart</h1>
           {/* add more options */}
           <div className="navbar_cart_button">
-            <Link to="/cart">
+            <Link to="/cart" aria-label="cart">
               <BsFillFastForwardFill />
               <p>See cart details</p>
             </Link>
