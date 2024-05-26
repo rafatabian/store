@@ -1,8 +1,9 @@
-.seeReview_container{
+.seeReview_container {
     width: 100%;
     background-color: var(--off-white);
 }
-.seeReview_left_and_right{
+
+.seeReview_left_and_right {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -10,38 +11,44 @@
     justify-content: flex-start;
     padding: 1rem 42px;
 }
-.seeReview_left{
+
+.seeReview_left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
-.seeReview_right{
+
+.seeReview_right {
     width: 100%;
-    display: flex;    
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 15px;
 }
-.seeReview_right_menu{
+
+.seeReview_right_menu {
     width: 100%;
     background-color: white;
     border-radius: 6px;
     padding: 20px;
     box-shadow: 0 0 10px rgb(232, 232, 232);
 }
-.seeReview_right_menu div:first-child{
+
+.seeReview_right_menu div:first-child {
     border-bottom: 1px solid #eee;
 }
-.seeReview_right_menu div:first-child h1{
+
+.seeReview_right_menu div:first-child h1 {
     font-size: 25px;
     letter-spacing: 0.3px;
-    color:#222222;
+    color: #222222;
     margin-bottom: 5px;
 }
-.seeReview_right_menu_btn{
-    color:white;
+
+.seeReview_right_menu_btn {
+    color: white;
     background-color: #000;
     border: 2px solid #000;
     border-radius: 6px;
@@ -56,7 +63,8 @@
     font-family: var(--roboto);
     margin: 10px 0 15px 0;
 }
-.seeReview_right_filters{
+
+.seeReview_right_filters {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -64,29 +72,34 @@
     justify-content: flex-start;
     margin: 15px 0 0 0;
 }
+
 .seeReview_right_filters select,
-.seeReviews_verified_button{
+.seeReviews_verified_button {
     flex: 0.7;
 }
-.seeReviews_verified_button{
+
+.seeReviews_verified_button {
     display: flex !important;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-.seeReviews_verified_button svg{
+
+.seeReviews_verified_button svg {
     width: 18px;
     height: 18px;
     margin-right: 3px;
     color: #222222;
 }
-.seeReviews_input_container{
+
+.seeReviews_input_container {
     flex: 1.1;
 }
+
 .seeReview_right_filters select,
 .seeReviews_input_container input,
-.seeReviews_verified_button{
+.seeReviews_verified_button {
     display: block;
     height: 36px;
     padding: 7px 12px;
@@ -99,39 +112,46 @@
     border-radius: 6px;
     letter-spacing: 0.3px;
     /* -webkit-appearance: none; */
-    -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
-    -o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
-    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.seeReview_right_filters select:focus{
+
+.seeReview_right_filters select:focus {
     outline: none;
 }
-.seeReviews_input_container input{
+
+.seeReviews_input_container input {
     outline: none;
 }
+
 .seeReview_right_filters select,
-.seeReviews_verified_button{
+.seeReviews_verified_button {
     margin-right: 5px;
 }
-.seeReviews_input_container{
+
+.seeReviews_input_container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.seeReviews_input_container input{
+
+.seeReviews_input_container input {
     width: 100%;
 }
-.seeReviews_input_container svg{
+
+.seeReviews_input_container svg {
     position: absolute;
     right: 10px;
-    color:#333333;
+    color: #333333;
     width: 17px;
     height: 17px;
     cursor: pointer;
 }
+
 /* displaied products */
-.seeReview_right_content{
+.seeReview_right_content {
     width: 100%;
     background-color: white;
     margin-top: 15px;
@@ -139,16 +159,18 @@
     border-radius: 6px;
     box-shadow: 0 0 10px rgb(232, 232, 232);
 }
-.seeReview_of_the_product{
+
+.seeReview_of_the_product {
     width: 100%;
-    border-bottom:1px solid #eee;
+    border-bottom: 1px solid #eee;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem 0;
 }
-.seeReview_image_and_name{
+
+.seeReview_image_and_name {
     width: 20%;
     display: flex;
     align-items: center;
@@ -156,50 +178,58 @@
     flex-direction: column;
     margin-right: 15px;
 }
-.seeReview_image_and_name img{
+
+.seeReview_image_and_name img {
     max-width: 100px;
     max-height: 100px;
     object-fit: cover;
     background-repeat: no-repeat;
 }
-.seeReview_image_and_name h3{
+
+.seeReview_image_and_name h3 {
     width: 100%;
     font-size: 12.5px;
     letter-spacing: 0.3px;
-    color:#222222;
+    color: #222222;
     margin-top: 15px;
 }
-.seeReview_product_content{
+
+.seeReview_product_content {
     height: 100%;
     width: 100%;
 }
-.seeReview_product_content div:first-child{
+
+.seeReview_product_content div:first-child {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.seeReview_product_content div:first-child h3{
+
+.seeReview_product_content div:first-child h3 {
     font-size: 12.5px;
     color: #888888;
 }
-.seeReview_product_content div:first-child button{
+
+.seeReview_product_content div:first-child button {
     background-color: white;
-    border:none;
+    border: none;
     font-size: 13px;
     letter-spacing: 0.3px;
     color: #005eb8;
     cursor: pointer;
 }
-.seeReview_product_title{
+
+.seeReview_product_title {
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.3px;
-    color:#333333;
-    margin:5px 0 8px 0;
+    color: #333333;
+    margin: 5px 0 8px 0;
 }
-.seeReview_stars_container{
+
+.seeReview_stars_container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -207,35 +237,40 @@
     justify-content: flex-start;
     margin-bottom: 20px;
 }
-.seeReview_stars_container svg{
-     width: 16px;
-     height: 16px;
+
+.seeReview_stars_container svg {
+    width: 16px;
+    height: 16px;
 }
-.seeReview_stars_container p{
+
+.seeReview_stars_container p {
     margin-left: 13px;
     font-size: 13px;
     color: #888888;
     font-weight: 500;
     letter-spacing: 0.4px;
 }
-.seeReview_content{
+
+.seeReview_content {
     width: 100%;
     font-size: 15px;
     color: #222222;
     letter-spacing: 0.3px;
     margin-bottom: 15px;
 }
-.seeReview_of_the_product div:nth-child(5){
-     width: 100%;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: flex-start;
+
+.seeReview_of_the_product div:nth-child(5) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
-.seeReview_of_the_product div:nth-child(5) button{
+
+.seeReview_of_the_product div:nth-child(5) button {
     border: none;
     background-color: white;
-    margin-right:2px;
+    margin-right: 2px;
     width: 25px;
     height: 25px;
     display: flex;
@@ -243,20 +278,24 @@
     justify-content: center;
     cursor: pointer;
 }
-.seeReview_of_the_product div:nth-child(5) button svg{
+
+.seeReview_of_the_product div:nth-child(5) button svg {
     width: 21px;
     height: 21px;
     color: #6093c3;
 }
-.seeReview_of_the_product div:nth-child(5) button:focus{
+
+.seeReview_of_the_product div:nth-child(5) button:focus {
     outline: none;
 }
-.seeReview_of_the_product div:nth-child(5) p{
+
+.seeReview_of_the_product div:nth-child(5) p {
     color: #005eb8;
     font-size: 14px;
 }
+
 /* no results found */
-.seeReview_no_review{
+.seeReview_no_review {
     width: 100%;
     padding: 1rem 0;
     display: flex;
@@ -264,18 +303,21 @@
     justify-content: flex-start;
     flex-direction: column;
 }
-.seeReview_no_review div:first-child{
+
+.seeReview_no_review div:first-child {
     width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.seeReview_no_review div:first-child img{
+
+.seeReview_no_review div:first-child img {
     width: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
 }
-.seeReview_no_review div:nth-child(2){
+
+.seeReview_no_review div:nth-child(2) {
     width: 100%;
     display: flex;
     align-items: center;
@@ -283,71 +325,82 @@
     flex-direction: column;
     margin: 1rem
 }
-.seeReview_no_review div:nth-child(2) h1{
+
+.seeReview_no_review div:nth-child(2) h1 {
     font-size: 24px;
-    color:#222222;
+    color: #222222;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
-.seeReview_no_review div:nth-child(2) p{
-    color:#333333;
+
+.seeReview_no_review div:nth-child(2) p {
+    color: #333333;
     font-size: 14.5px;
     letter-spacing: 0.3px;
     margin: 7px 0;
 }
-.seeReview_no_review div:nth-child(2) p a{
+
+.seeReview_no_review div:nth-child(2) p a {
     color: #005eb8;
     font-size: 14.5px;
     letter-spacing: 0.3px;
 }
+
 /* 
 responsive design
  */
- .star_cont_background{
+.star_cont_background {
     background-color: white !important;
     width: 100% !important;
     margin-left: unset !important;
     border-radius: 6px !important;
     box-shadow: 0 0 10px rgb(232, 232, 232);
- }
- @media screen and (min-width: 1530px){
-    .seeReview_left_and_right{
+}
+
+@media screen and (min-width: 1530px) {
+    .seeReview_left_and_right {
         width: 1436px;
         min-width: 1436px;
         padding: 16px 0;
-      }
-      .seeReview_container{
-         display: flex;
-         align-items: center;
-         flex-direction: column;
-      }
-      .seeReview_left{
-        width: 100%;
-        max-width: 340px;
-        margin-right: 60px;
-      }
- }
- @media screen and (min-width:1280px) and (max-width: 1530px){
-     .seeReview_left_and_right{
-       width: 1280px;
-     }
-     .seeReview_container{
+    }
+
+    .seeReview_container {
         display: flex;
         align-items: center;
         flex-direction: column;
-     }
- }
+    }
 
- @media screen and (max-width: 890px){
-    .seeReview_left{
+    .seeReview_left {
+        width: 100%;
+        max-width: 340px;
+        margin-right: 60px;
+    }
+}
+
+@media screen and (min-width:1280px) and (max-width: 1530px) {
+    .seeReview_left_and_right {
+        width: 1280px;
+    }
+
+    .seeReview_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .seeReview_left {
         display: none;
     }
-    .seeReview_right{
+
+    .seeReview_right {
         margin-left: unset;
     }
- }
- @media screen and (max-width:730px){
-    .seeReviews_verified_button{
+}
+
+@media screen and (max-width:730px) {
+    .seeReviews_verified_button {
         width: 36px !important;
         flex: unset;
         display: flex;
@@ -355,15 +408,17 @@ responsive design
         justify-content: center;
         padding: 0;
     }
-    .seeReviews_verified_button > svg{
+
+    .seeReviews_verified_button>svg {
         margin: 0;
     }
 
-    .seeReview_of_the_product{
+    .seeReview_of_the_product {
         flex-direction: column;
         margin-bottom: 15px;
     }
-    .seeReview_image_and_name{
+
+    .seeReview_image_and_name {
         flex-direction: row;
         width: calc(100vw - 30px);
         margin-right: unset;
@@ -373,24 +428,28 @@ responsive design
         padding: 5px 15px 15px 10px;
         border-bottom: 5px solid #cccccc61
     }
-    .seeReview_of_the_product{
+
+    .seeReview_of_the_product {
         position: relative;
         background-color: white;
         padding: 20px 15px;
         border-radius: 6px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
-    .seeReview_product_content >div:first-child{
+
+    .seeReview_product_content>div:first-child {
         position: absolute;
         width: calc(100% - 30px);
         margin-left: 15px;
         top: 15px;
-        left:0;
+        left: 0;
     }
-    .seeReview_image_and_name img{
+
+    .seeReview_image_and_name img {
         margin-right: 15px;
     }
-    .seeReview_right_content{
+
+    .seeReview_right_content {
         padding: 20px 15px;
         width: 100vw;
         margin-left: -10px;
@@ -398,31 +457,39 @@ responsive design
         border-radius: unset;
         box-shadow: unset;
     }
-    .seeReview_image_and_name h3{
+
+    .seeReview_image_and_name h3 {
         margin-top: unset;
     }
- }
- @media screen and (max-width: 550px){
-    .seeReview_right_menu{
-        padding: 20px 15px; 
+}
+
+@media screen and (max-width: 550px) {
+    .seeReview_right_menu {
+        padding: 20px 15px;
     }
-    .seeReviews_input_container input{
+
+    .seeReviews_input_container input {
         min-width: 140px;
     }
-    .seeReview_right_filters > select:first-child{
+
+    .seeReview_right_filters>select:first-child {
         display: none;
     }
-    .seeReview_no_review div:first-child{
+
+    .seeReview_no_review div:first-child {
         width: 55%;
     }
-    .seeReview_product_title{
+
+    .seeReview_product_title {
         font-size: 15px !important;
         letter-spacing: 0.3px;
     }
-    .seeReview_content{
-      font-size: 13.5px;
+
+    .seeReview_content {
+        font-size: 13.5px;
     }
-    .seeReview_left_and_right{
+
+    .seeReview_left_and_right {
         padding: 15px 10px;
     }
- }
+}

@@ -103,7 +103,7 @@
  import camera from "./prod-images/camera.webp"
  import camera_s from "./prod-images/camera_s.webp"
  
- export let products = [{
+ export const products = [{
     name: "Sony WH-1000XM5 Noise Cancelling Wireless Headphones - 30 hours battery life - Over-ear style - Optimised for Alexa and the Google Assistant - with built-in mic for phone calls - Black",
     price:[279, "27"],
     id: "1",

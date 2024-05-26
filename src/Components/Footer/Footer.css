@@ -52,6 +52,15 @@
 .footer_socials_container{
   width: 150px;
 }
+.footer_socials_container > div{
+    width: 100% ;
+    display: flex;
+    justify-content:space-between;
+}
+.footer_socials_container > p{
+    font-size: 14px;
+    margin-top: 5px;
+}
 .footer_bottom_container{
     margin: 2rem 0 1rem 0;
 }
@@ -84,6 +93,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
 }
 .footer_socials_container button{
     background-color: transparent;
@@ -184,6 +194,10 @@ responsive design
  .footer_bottom_container > span:first-child,
  .footer_copyright{
     display: none;
+ }
+ .footer_socials_container > p{
+    width: 100%;
+    text-align: center;
  }
 }
 @media screen and (min-width:750px){

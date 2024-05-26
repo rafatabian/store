@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 const Footer = () => { 
      const [menu, setMenu] = useState(null)
      const [vw, setVw] = useState(null)
+     const [consminSoon, setComingSoon] = useState(null)
 
 // clicking the menus triger drop down
 const handleDropdown = (e) => {
@@ -41,7 +42,7 @@ useEffect(() => {
              <IoIosArrowDown />
           </div>
          
-         {(vw || menu == "help" ) &&
+         {(vw || menu === "help") &&
           <div className="footer_animated_container">
           <Link to="/help4">Get help</Link>
           <Link to="/help2">Return product</Link>
@@ -90,11 +91,15 @@ useEffect(() => {
           <p>All Rights Reserved.</p>
         </div>
         <div className="footer_socials_container">
-          <button onClick={() => alert("Coming soon!")} aria-label="Instagram"><FaInstagram /></button>
-          <button onClick={() => alert("Coming soon!")} aria-label="Facebook"><FaFacebookF /></button>
-          <button onClick={() => alert("Coming soon!")} aria-label="Twitter"><FaTwitter /></button>
-          <button onClick={() => alert("Coming soon!")} aria-label="Youtube"><FaYoutube /></button>
+          <div>
+            <button onClick={() => setComingSoon(true)} aria-label="Instagram"><FaInstagram /></button>
+            <button onClick={() => setComingSoon(true)} aria-label="Facebook"><FaFacebookF /></button>
+            <button onClick={() => setComingSoon(true)} aria-label="Twitter"><FaTwitter /></button>
+            <button onClick={() => setComingSoon(true)} aria-label="Youtube"><FaYoutube /></button>
+          </div>
+          {consminSoon ? <p>Coming soon!</p> : null}
         </div>
+        
        </div>
 
        <div className="footer_bottom_mobile">

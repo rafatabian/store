@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const LoginContext = createContext()
 
-export const LoginFunction = ({children}) => {
+export const LoginFunction = ({ children }) => {
     const [name, setName] = useState("")
     // account states
     const [localImg, setLocalImg] = useState("")
@@ -32,7 +32,7 @@ export const LoginFunction = ({children}) => {
     // screll to sections
     const [section, setSection] = useState("")
 
-return(<LoginContext.Provider value={{year, setYear, month, setMonth, day, setDay, name, setName, localImg, setLocalImg, alias, setAlias, email, setEmail, phoneNr, setPhoneNr, showSettings, setShowSettings, liked, setLiked, premGenius, setPremGenius, cartProd, setCartProd, prodID, setProdID, redirectPage, setRedirectPage, productHistory, setProductHistory, section, setSection, reviewNr, setReviewNr}}>
-    {children}
+    return (<LoginContext.Provider value={{ year, setYear, month, setMonth, day, setDay, name, setName, localImg, setLocalImg, alias, setAlias, email, setEmail, phoneNr, setPhoneNr, showSettings, setShowSettings, liked, setLiked, premGenius, setPremGenius, cartProd, setCartProd, prodID, setProdID, redirectPage, setRedirectPage, productHistory, setProductHistory, section, setSection, reviewNr, setReviewNr }}>
+        {children}
     </LoginContext.Provider>)
 }
